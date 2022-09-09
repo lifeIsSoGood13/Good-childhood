@@ -26,4 +26,5 @@ body {
 	background-position: top center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
