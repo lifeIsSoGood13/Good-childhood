@@ -1,0 +1,83 @@
+.header {
+  max-width: 1180px;
+  margin: 40px auto 512px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation {
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navigationItem {
+  cursor: pointer;
+  margin-right: 55px;
+  list-style-type: none;
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.navigationItem:last-of-type{
+  margin-right: 25px;
+}
+
+.logo {
+  width: 145px;
+  height: 145px;
+}
+
+.contacts {
+  composes: navigation;
+}
+
+.telephone {
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #000000;
+  margin-right: 34px;
+}
+
+.social {
+  composes: navigation;
+}
+
+.socialLink {
+  text-decoration: none;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.socialItem {
+  cursor: pointer;
+  list-style-type: none;
+
+  margin-right: 13px;
+}
+
+.socialItem:last-of-type {
+  margin-right: 0;
+}
+
+.ourChannel {
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  margin-left: 8px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #000000;
+}
