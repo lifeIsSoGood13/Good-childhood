@@ -1,8 +1,8 @@
-import './app.module.css';
+import style from './app.module.css';
 
 export function App() {
   return (
-    <div className="App">
+    <div className={style.App}>
       <p>Hello, world!</p>
     </div>
   );
