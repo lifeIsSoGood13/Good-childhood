@@ -65,3 +65,31 @@
 .descriptionItem:nth-child(1) .descriptionText {
   width: 307px;
 }
+
+.books {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.headingNewBooks {
+  margin: 120px 0 50px 0;
+  font-family: 'RubikDirt-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #BD6D6E;
+}
+
+.booksWrap {
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(184, 169, 196);
+}
+
+.headingVideos {
+  composes: headingNewBooks;
+  margin: 0 0 50px 0;
+}

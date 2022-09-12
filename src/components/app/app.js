@@ -3,15 +3,37 @@ import { Header } from '../header/header';
 import FirstCloud from '../../images/first-cloud.png';
 import SecondCloud from '../../images/second-cloud.png';
 import ThirdCloud from '../../images/third-cloud.png';
+import { Book } from '../book/book';
+
+const data = [
+  {
+    id: 1,
+    image: 'https://konzeptual.ru/image/cache/catalog/products/49bf2756c304a8aeff27965bc91c7377-540x860.jpg',
+    title: 'Непослушный котенок',
+    author: 'Иван Белышев, Борис Житков',
+  },
+  {
+    id: 2,
+    image: 'https://konzeptual.ru/image/cache/catalog/products/49bf2756c304a8aeff27965bc91c7377-540x860.jpg',
+    title: 'Непослушный котенок',
+    author: 'Иван Белышев, Борис Житков',
+  },
+  {
+    id: 3,
+    image: 'https://konzeptual.ru/image/cache/catalog/products/49bf2756c304a8aeff27965bc91c7377-540x860.jpg',
+    title: 'Непослушный котенок и маленький сорванец и звери на луне',
+    author: 'Иван Белышев, Борис Житков',
+  },
+];
 
 export function App() {
   return (
     <div className={style.App}>
       <Header />
       <main>
-        <p className={style.tagline}>
+        <h1 className={style.tagline}>
           Проект для повышения осознанности общества в&nbsp;деле воспитания детей.
-        </p>
+        </h1>
         <ul className={style.description}>
           <li className={style.descriptionItem}>
             <img className={style.cloudImage} src={FirstCloud} alt="" />
@@ -34,6 +56,18 @@ export function App() {
             </p>
           </li>
         </ul>
+        <section className={style.books}>
+          <h2 className={style.headingNewBooks}>Новинки издательства</h2>
+          <div></div>
+          <div className={style.booksWrap}>
+            {data.map((item) => (
+              <Book key={item.id} {...item} />
+            ))}
+          </div>
+        </section>
+        <section className={style.books}>
+          <h2 className={style.headingVideos}>Видеоконтент проекта</h2>
+        </section>
       </main>
     </div>
   );
