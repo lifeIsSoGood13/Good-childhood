@@ -33,13 +33,13 @@ export function App() {
       <Header />
       <main>
         <h1 className={style.tagline}>
-          Проект для повышения осознанности общества в&nbsp;деле воспитания детей.
+          Проект для повышения осознанности общества в&nbsp;деле воспитания детей
         </h1>
         <ul className={style.description}>
           <li className={style.descriptionItem}>
             <img className={style.cloudImage} src={FirstCloud} alt="" />
             <p className={style.descriptionText}>
-              Мы&nbsp;выпускаем развивающие книги, созданные по&nbsp;критериям правильных детских книг
+              Мы&nbsp;выпускаем развивающие книги, созданные по&nbsp;критериям правильных детских книг,
               разработанных лучшими психологами и&nbsp;сказкотерапевтами.
             </p>
           </li>
@@ -52,7 +52,7 @@ export function App() {
           <li className={style.descriptionItem}>
             <img className={style.cloudImage} src={ThirdCloud} alt="" />
             <p className={style.descriptionText}>
-              Проводим вебинары, форумы по&nbsp;актуальным темам о&nbsp;воспитаний, здоровьесберегающим
+              Проводим вебинары, форумы по&nbsp;актуальным темам воспитания детей, здоровьесберегающим
               технологиям и&nbsp;многом другом.
             </p>
           </li>
