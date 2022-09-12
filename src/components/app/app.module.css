@@ -93,3 +93,7 @@
   composes: headingNewBooks;
   margin: 0 0 50px 0;
 }
+
+.video {
+  margin-bottom: 96px;
+}

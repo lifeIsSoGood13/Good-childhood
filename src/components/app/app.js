@@ -1,5 +1,6 @@
 import style from './app.module.css';
 import { Header } from '../header/header';
+import Iframe from 'react-iframe';
 import FirstCloud from '../../images/first-cloud.png';
 import SecondCloud from '../../images/second-cloud.png';
 import ThirdCloud from '../../images/third-cloud.png';
@@ -67,6 +68,14 @@ export function App() {
         </section>
         <section className={style.books}>
           <h2 className={style.headingVideos}>Видеоконтент проекта</h2>
+          <Iframe
+            className={style.video}
+            width="100%"
+            height="664px"
+            url="https://www.youtube.com/embed/videoseries?list=PLxkQ0Mnh7vgzHR6npBF-eB8n0UAX74m-D"
+            frameBorder="0"
+            allowFullScreen
+          />
         </section>
       </main>
     </div>
