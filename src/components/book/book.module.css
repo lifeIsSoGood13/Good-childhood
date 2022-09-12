@@ -6,10 +6,6 @@
   border-radius: 20px;
 }
 
-.book:hover {
-  box-shadow: 0 0 20px #c7c7c7;
-}
-
 .imageWrap {
   max-width: 339px;
   max-height: 540px;
