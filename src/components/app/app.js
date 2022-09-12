@@ -11,19 +11,19 @@ const data = [
     id: 1,
     image: 'https://konzeptual.ru/image/cache/catalog/products/49bf2756c304a8aeff27965bc91c7377-540x860.jpg',
     title: 'Непослушный котенок',
-    author: 'Иван Белышев, Борис Житков',
+    author: 'Иван Белышев',
   },
   {
     id: 2,
-    image: 'https://konzeptual.ru/image/cache/catalog/products/49bf2756c304a8aeff27965bc91c7377-540x860.jpg',
-    title: 'Непослушный котенок',
-    author: 'Иван Белышев, Борис Житков',
+    image: 'https://konzeptual.ru/image/cache/catalog/products/418a22a71e1f04fe883c8811d531be2c-540x860.jpg',
+    title: 'Бригада смышлёных. Повесть [1947]',
+    author: 'Владимир Курочкин',
   },
   {
     id: 3,
-    image: 'https://konzeptual.ru/image/cache/catalog/products/49bf2756c304a8aeff27965bc91c7377-540x860.jpg',
-    title: 'Непослушный котенок и маленький сорванец и звери на луне',
-    author: 'Иван Белышев, Борис Житков',
+    image: 'https://konzeptual.ru/image/cache/catalog/products/08311ea7c2564deaafb05655bc183296-540x860.jpg',
+    title: 'Златый путь. Сказки Бояна',
+    author: 'Владимир Борисов',
   },
 ];
 

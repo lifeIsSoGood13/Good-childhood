@@ -86,12 +86,11 @@
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(184, 169, 196);
 }
 
 .headingVideos {
   composes: headingNewBooks;
-  margin: 0 0 50px 0;
+  margin: 20px 0 50px 0;
 }
 
 .video {
