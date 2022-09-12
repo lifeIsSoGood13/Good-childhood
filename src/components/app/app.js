@@ -67,7 +67,7 @@ export function App() {
             ))}
           </div>
         </section>
-        <section className={style.books}>
+        <section id="video" className={style.books}>
           <h2 className={style.headingVideos}>Видеоконтент проекта</h2>
           <Iframe
             className={style.video}

@@ -10,11 +10,17 @@ export function Header() {
       <nav>
         <ul className={style.navigation}>
           <li className={style.navigationItem}>Книги</li>
-          <li className={style.navigationItem}>Видеоконтент</li>
+          <li className={style.navigationItem}>
+            <a className={style.navigationLink} href="#video">
+              Видеоконтент
+            </a>
+          </li>
           <li className={style.navigationItem}>Контакты</li>
         </ul>
       </nav>
-      <img className={style.logo} src={logo} alt="Доброе детство" />
+      <a href="/">
+        <img className={style.logo} src={logo} alt="Доброе детство" />
+      </a>
       <div className={style.contacts}>
         <span className={style.telephone}>+7 (495) 374-84-75</span>
         <ul className={style.social}>
