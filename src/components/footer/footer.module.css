@@ -1,0 +1,73 @@
+.footer {
+  width: 100%;
+  min-height: 88px;
+  background-color: #BD6D6E;
+}
+
+.footerWrap {
+  max-width: 1180px;
+  max-height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 31px;
+}
+
+.copyright {
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  font-feature-settings: 'salt' on, 'liga' off;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  margin: 0 111px 0 auto;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  font-feature-settings: 'pnum' on, 'lnum' on, 'salt' on, 'liga' off;
+  color: #FFFFFF;
+}
+
+.phone img {
+  margin-right: 12px;
+  width: 17px;
+  height: 17px;
+}
+
+.email {
+  composes: phone;
+  display: flex;
+  margin-left: 38px;
+}
+
+.socialItems {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.socialItem {
+  list-style-type: none;
+  width: 24px;
+  height: 24px;
+}
+
+.socialItem:nth-child(2) {
+  margin: 0 11px 0 11px;
+}

@@ -5,6 +5,7 @@ import FirstCloud from '../../images/first-cloud.png';
 import SecondCloud from '../../images/second-cloud.png';
 import ThirdCloud from '../../images/third-cloud.png';
 import { Book } from '../book/book';
+import { Footer } from '../footer/footer';
 
 const data = [
   {
@@ -78,6 +79,7 @@ export function App() {
           />
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
