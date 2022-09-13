@@ -1,3 +1,4 @@
+import React from 'react';
 import style from './app.module.css';
 import { Header } from '../header/header';
 import Iframe from 'react-iframe';
@@ -7,28 +8,22 @@ import ThirdCloud from '../../images/third-cloud.png';
 import { Book } from '../book/book';
 import { Footer } from '../footer/footer';
 
-const data = [
-  {
-    id: 1,
-    image: 'https://konzeptual.ru/image/cache/catalog/products/49bf2756c304a8aeff27965bc91c7377-540x860.jpg',
-    title: 'Непослушный котенок',
-    author: 'Иван Белышев',
-  },
-  {
-    id: 2,
-    image: 'https://konzeptual.ru/image/cache/catalog/products/418a22a71e1f04fe883c8811d531be2c-540x860.jpg',
-    title: 'Бригада смышлёных. Повесть [1947]',
-    author: 'Владимир Курочкин',
-  },
-  {
-    id: 3,
-    image: 'https://konzeptual.ru/image/cache/catalog/products/08311ea7c2564deaafb05655bc183296-540x860.jpg',
-    title: 'Златый путь. Сказки Бояна',
-    author: 'Владимир Борисов',
-  },
-];
-
 export function App() {
+  const [items, setItems] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('https://632054139f82827dcf2a1cca.mockapi.io/books')
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return Promise.reject(`Ошибка ${res.status}`);
+        }
+      })
+      .then((data) => setItems(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className={style.App}>
       <Header />
@@ -62,7 +57,7 @@ export function App() {
           <h2 className={style.headingNewBooks}>Новинки издательства</h2>
           <div></div>
           <div className={style.booksWrap}>
-            {data.map((item) => (
+            {items.slice(0, 3).map((item) => (
               <Book key={item.id} {...item} />
             ))}
           </div>
