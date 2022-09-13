@@ -64,14 +64,13 @@ export function App() {
         </section>
         <section id="video" className={style.books}>
           <h2 className={style.headingVideos}>Видеоконтент проекта</h2>
-          <Iframe
+          <iframe
             className={style.video}
+            src="https://vk.com/video_ext.php?oid=-136337801&id=456239500&hash=a5083d250d3f61c2&hd=2"
             width="100%"
             height="664px"
-            url="https://www.youtube.com/embed/videoseries?list=PLxkQ0Mnh7vgzHR6npBF-eB8n0UAX74m-D"
-            frameBorder="0"
-            allowFullScreen
-          />
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+          ></iframe>
         </section>
       </main>
       <Footer />
