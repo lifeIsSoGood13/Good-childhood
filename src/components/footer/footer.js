@@ -22,17 +22,21 @@ export function Footer() {
         </div>
         <ul className={style.socialItems}>
           <li className={style.socialItem}>
-            <a href="https://t.me/dobroe_detstvo" target="_blank">
+            <a href="https://t.me/dobroe_detstvo" target="_blank" rel="noreferrer">
               <img src={FooterTg} alt="Телеграм" />
             </a>
           </li>
           <li className={style.socialItem}>
-            <a href="https://vk.com/izdatel_dobroe_detstvo" target="_blank">
+            <a href="https://vk.com/izdatel_dobroe_detstvo" target="_blank" rel="noreferrer">
               <img src={FooterVk} alt="ВКонтакте" />
             </a>
           </li>
           <li className={style.socialItem}>
-            <a href="https://www.youtube.com/channel/UCaiMuGF8LARjnHdsUrDRy9A" target="_blank">
+            <a
+              href="https://www.youtube.com/channel/UCaiMuGF8LARjnHdsUrDRy9A"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={FooterYt} alt="Ютуб" />
             </a>
           </li>

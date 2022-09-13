@@ -25,12 +25,22 @@ export function Header() {
         <span className={style.telephone}>+7 (495) 374-84-75</span>
         <ul className={style.social}>
           <li className={style.socialItem}>
-            <a className={style.socialLink} href="https://t.me/dobroe_detstvo" target="_blank">
+            <a
+              className={style.socialLink}
+              href="https://t.me/dobroe_detstvo"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={telegram} alt="Телеграм" />
             </a>
           </li>
           <li className={style.socialItem}>
-            <a className={style.socialLink} href="https://vk.com/izdatel_dobroe_detstvo" target="_blank">
+            <a
+              className={style.socialLink}
+              href="https://vk.com/izdatel_dobroe_detstvo"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img src={vkontakte} alt="ВКонтакте" />
             </a>
           </li>
@@ -39,6 +49,7 @@ export function Header() {
               className={style.socialLink}
               href="https://www.youtube.com/channel/UCaiMuGF8LARjnHdsUrDRy9A"
               target="_blank"
+              rel="noreferrer"
             >
               <img src={youtube} alt="Ютуб" />
               <span className={style.ourChannel}>Наш канал</span>
