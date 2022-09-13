@@ -1,5 +1,4 @@
 .book {
-  cursor: pointer;
   max-width: 339px;
   min-height: 748px;
 }
@@ -11,6 +10,7 @@
 
 .image {
   width: 100%;
+  cursor: pointer;
 }
 
 .title {
