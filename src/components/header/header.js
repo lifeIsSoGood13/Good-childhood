@@ -8,21 +8,23 @@ import vkontakte from '../../images/vk.png';
 import youtube from '../../images/youtube.png';
 import navigation from '../../images/header-menu.png';
 
-export function Header() {
+export function Header(props) {
   return (
     <header className={style.header}>
       <nav>
         <img className={style.navIcon} src={navigation} alt="Навигация" />
         <ul className={style.navigation}>
           <Link className={style.pageLink} to="/books">
-            <li className={style.navigationItem}>Книги</li>
+            <li className={style.navigationItem} onClick={props.removeBackground}>
+              Книги
+            </li>
           </Link>
-          <li className={style.navigationItem}>
+          <li className={style.navigationItem} onClick={props.addBackground}>
             <HashRouter className={style.navigationLink} to="/#video">
               Видеоконтент
             </HashRouter>
           </li>
-          <li className={style.navigationItem}>
+          <li className={style.navigationItem} onClick={props.removeBackground}>
             <Link className={style.navigationLink} to="/contacts">
               Контакты
             </Link>
@@ -30,7 +32,7 @@ export function Header() {
         </ul>
       </nav>
       <Link to="/">
-        <img className={style.logo} src={logo} alt="Доброе детство" />
+        <img className={style.logo} src={logo} alt="Доброе детство" onClick={props.addBackground} />
       </Link>
       <div className={style.contacts}>
         <span className={style.telephone}>+7 (495) 374-84-75</span>
