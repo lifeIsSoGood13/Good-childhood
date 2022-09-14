@@ -32,7 +32,7 @@
 }
 
 .descriptionItem:nth-child(2) {
-  margin: 0 25px 0 25px;
+  margin: 0 25px;
 }
 
 .cloudImage {
@@ -96,4 +96,91 @@
 .video {
   margin-bottom: 96px;
   border: none;
+}
+
+@media screen and (max-width: 1190px) {
+  .descriptionItem:nth-child(2) {
+    margin: 0 12px;
+  }
+
+  .headingNewBooks {
+    margin-left: 5px;
+  }
+
+  .booksWrap {
+    justify-content: center;
+  }
+
+  .video {
+    width: 1170px;
+    height: 658px;
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .tagline {
+    width: 247px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .description {
+    margin-top: 120px;
+    flex-direction: column;
+  }
+
+  .descriptionItem {
+    width: 620px;
+    display: flex;
+    min-height: 120px;
+
+  }
+
+  .descriptionItem:nth-child(2) {
+    margin: 20px 0;
+  }
+
+  .descriptionText {
+    width: 467px;
+    margin: 23px 21px 28px 15px;
+  }
+
+  .descriptionItem:nth-child(1) .descriptionText {
+    width: 467px;
+  }
+
+  .descriptionItem:nth-child(2) .descriptionText {
+    width: 312px;
+    margin: 37px 0 37px 12px;
+  }
+
+  .descriptionItem:nth-child(1) .cloudImage {
+    margin: 23px 0 33px 33px;
+  }
+  
+  .descriptionItem:nth-child(2) .cloudImage {
+    margin: 30px 0 30px 33px;
+  }
+  
+  .descriptionItem:nth-child(3) .cloudImage {
+    margin: 26px 0 42px 33px;
+  }
+
+  .books {
+    width: 620px;
+  }
+
+  .headingNewBooks {
+    margin-top: 90px;
+  }
+
+  .headingVideos {
+    margin-top: 75px;
+  }
+
+  .video {
+    width: 100%;
+    height: 348px;
+  }
 }

@@ -9,9 +9,10 @@
   max-height: 100%;
   margin: auto;
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 31px;
+  padding: 31px 50px 0 50px;
 }
 
 .copyright {
@@ -70,4 +71,26 @@
 
 .socialItem:nth-child(2) {
   margin: 0 11px 0 11px;
+}
+
+@media screen and (max-width: 1135px) {
+  .footerWrap {
+    width: 620px;
+    justify-content: flex-start;
+    padding-top: 28px;
+  }
+
+  .copyright {
+    order: 3;
+    margin: 24px 0 28px 0;
+  }
+
+  .contacts {
+    order: 1;
+    margin: 0 auto 0 0;
+  }
+
+  .socialItems {
+    order: 2;
+  }
 }

@@ -35,7 +35,7 @@ export function App() {
           <li className={style.descriptionItem}>
             <img className={style.cloudImage} src={FirstCloud} alt="" />
             <p className={style.descriptionText}>
-              Мы&nbsp;выпускаем развивающие книги, созданные по&nbsp;критериям правильных детских книг,
+              Мы&nbsp;выпускаем развивающие книги, созданные по критериям правильных детских книг,
               разработанных лучшими психологами и&nbsp;сказкотерапевтами.
             </p>
           </li>

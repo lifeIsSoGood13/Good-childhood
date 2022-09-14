@@ -42,3 +42,31 @@
   line-height: 21px;
   color: #616161;
 }
+@media screen and (max-width: 1190px) {
+  .book {
+    margin-right: 40px; 
+  }
+
+  .book:last-child {
+    margin-right: 0; 
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .book {
+    max-width: 179px;
+    min-height: 285px;
+  }
+
+  .title {
+    margin: 16px 0 8px 0;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .author {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+  }
+}

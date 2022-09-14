@@ -3,11 +3,13 @@ import logo from '../../images/logo-white.png';
 import telegram from '../../images/telegram.png';
 import vkontakte from '../../images/vk.png';
 import youtube from '../../images/youtube.png';
+import navigation from '../../images/header-menu.png';
 
 export function Header() {
   return (
     <header className={style.header}>
       <nav>
+        <img className={style.navIcon} src={navigation} alt="Навигация" />
         <ul className={style.navigation}>
           <li className={style.navigationItem}>Книги</li>
           <li className={style.navigationItem}>

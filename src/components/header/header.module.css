@@ -1,10 +1,17 @@
 .header {
   max-width: 1180px;
   margin: 40px auto 0 auto;
+  padding: 0 50px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.navIcon {
+  cursor: pointer;
+  display: none;
 }
 
 .navigation {
@@ -51,7 +58,9 @@
 }
 
 .contacts {
-  composes: navigation;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .telephone {
@@ -66,7 +75,7 @@
 }
 
 .social {
-  composes: navigation;
+  composes: contacts;
 }
 
 .socialLink {
@@ -96,4 +105,31 @@
   line-height: 21px;
   font-feature-settings: 'pnum' on, 'lnum' on;
   color: #000000;
+}
+
+@media screen and (max-width: 1160px) {
+  .header {
+    max-width: 620px;
+    margin-top: 43px;
+  }
+
+  .logo {
+    width: 91px;
+    height: 91px;
+    position: absolute;
+    top: -28px;
+    right: 43.8%;
+  }
+
+  .navIcon {
+    display: block;
+  }
+
+  .navigation {
+    display: none;
+  }
+  
+  .telephone {
+    display: none;
+  }
 }
