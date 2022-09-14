@@ -28,21 +28,7 @@
 
 body {
   margin: 0;
-	background-repeat: no-repeat;
-	background-position: top center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
-}
-
-@media screen and (min-width: 1160px) {
-  body {
-		background-image: url(./images/bg.png);
-  }
-}
-
-@media screen and (max-width: 1160px) {
-  body {
-		background-image: url(./images/bg-tablet.png);
-  }
 }
