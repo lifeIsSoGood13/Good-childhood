@@ -1,3 +1,6 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink as HashRouter } from 'react-router-hash-link';
 import style from './header.module.css';
 import logo from '../../images/logo-white.png';
 import telegram from '../../images/telegram.png';
@@ -11,18 +14,24 @@ export function Header() {
       <nav>
         <img className={style.navIcon} src={navigation} alt="Навигация" />
         <ul className={style.navigation}>
-          <li className={style.navigationItem}>Книги</li>
+          <Link className={style.pageLink} to="/books">
+            <li className={style.navigationItem}>Книги</li>
+          </Link>
           <li className={style.navigationItem}>
-            <a className={style.navigationLink} href="#video">
+            <HashRouter className={style.navigationLink} to="/#video">
               Видеоконтент
-            </a>
+            </HashRouter>
           </li>
-          <li className={style.navigationItem}>Контакты</li>
+          <li className={style.navigationItem}>
+            <Link className={style.navigationLink} to="/contacts">
+              Контакты
+            </Link>
+          </li>
         </ul>
       </nav>
-      <a href="/">
+      <Link to="/">
         <img className={style.logo} src={logo} alt="Доброе детство" />
-      </a>
+      </Link>
       <div className={style.contacts}>
         <span className={style.telephone}>+7 (495) 374-84-75</span>
         <ul className={style.social}>

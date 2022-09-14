@@ -20,6 +20,10 @@
   display: flex;
 }
 
+.pageLink {
+  text-decoration: none;
+}
+
 .navigationItem {
   cursor: pointer;
   margin-right: 55px;
