@@ -1,10 +1,13 @@
+import React from 'react';
 import style from './main.module.css';
 import FirstCloud from '../../images/first-cloud.png';
 import SecondCloud from '../../images/second-cloud.png';
 import ThirdCloud from '../../images/third-cloud.png';
 import { Book } from '../book/book';
+import { BooksContext } from '../../services/AppContext';
 
-export function Main({ items }) {
+export function Main() {
+  const items = React.useContext(BooksContext);
   return (
     <main>
       <h1 className={style.tagline}>
@@ -12,18 +15,18 @@ export function Main({ items }) {
       </h1>
       <ul className={style.description}>
         <li className={style.descriptionItem}>
-          <img className={style.cloudImage} src={FirstCloud} alt="" />
+          <img className={style.cloudImage} src={FirstCloud} alt="Мы выпускаем развивающие книги" />
           <p className={style.descriptionText}>
             Мы&nbsp;выпускаем развивающие книги, созданные по критериям правильных детских книг, разработанных
             лучшими психологами и&nbsp;сказкотерапевтами.
           </p>
         </li>
         <li className={style.descriptionItem}>
-          <img className={style.cloudImage} src={SecondCloud} alt="" />
+          <img className={style.cloudImage} src={SecondCloud} alt="Разбираем популярные медиа-продукты" />
           <p className={style.descriptionText}>Разбираем воспитательные посылы популярных медиа-продуктов.</p>
         </li>
         <li className={style.descriptionItem}>
-          <img className={style.cloudImage} src={ThirdCloud} alt="" />
+          <img className={style.cloudImage} src={ThirdCloud} alt="Проводим вебинары и форумы" />
           <p className={style.descriptionText}>
             Проводим вебинары, форумы по&nbsp;актуальным темам воспитания детей, здоровьесберегающим
             технологиям и&nbsp;многом другом.

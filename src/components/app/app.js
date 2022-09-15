@@ -6,6 +6,7 @@ import { Main } from '../main/main';
 import { Books } from '../books/books';
 import { Footer } from '../footer/footer';
 import { Contacts } from '../contacts/contacts';
+import { BooksContext } from '../../services/AppContext';
 
 export function App() {
   const [items, setItems] = React.useState([]);
@@ -28,13 +29,15 @@ export function App() {
   }, []);
 
   return (
-    <div class={background ? style.App_background_image : style.App}>
+    <div className={background ? style.App_background_image : style.App}>
       <Header addBackground={handleAddBackground} removeBackground={handleRemoveBackground} />
-      <Routes>
-        <Route path="/" element={<Main items={items} />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/contacts" element={<Contacts />} />
-      </Routes>
+      <BooksContext.Provider value={items}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
+      </BooksContext.Provider>
       <Footer />
     </div>
   );

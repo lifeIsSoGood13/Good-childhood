@@ -86,7 +86,7 @@
 
 .headingVideos {
   composes: headingNewBooks;
-  margin: 0 0 50px 0;
+  margin: 50px 0 50px 0;
 }
 
 .video {
@@ -172,7 +172,7 @@
   }
 
   .headingVideos {
-    margin-top: 75px;
+    margin-top: 50px;
   }
 
   .video {

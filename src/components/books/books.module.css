@@ -1,0 +1,30 @@
+.books {
+  max-width: 1180px;
+  min-height: 100vh;
+  margin: 70px auto 100px auto;
+}
+
+.booksContainer {
+  display: grid;
+  grid-template: auto / repeat(4, 1fr);
+  gap: 40px 40px;
+}
+
+.title {
+  font-family: 'RubikDirt-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #BD6D6E;
+}
+
+.description {
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  margin-bottom: 80px;
+}
