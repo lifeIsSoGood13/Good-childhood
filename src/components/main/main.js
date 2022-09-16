@@ -18,13 +18,16 @@ export function Main({ openModal, setBookData }) {
         <li className={style.descriptionItem}>
           <img className={style.cloudImage} src={FirstCloud} alt="Мы выпускаем развивающие книги" />
           <p className={style.descriptionText}>
-            Мы&nbsp;выпускаем развивающие книги, созданные по критериям правильных детских книг, разработанных
-            лучшими психологами и&nbsp;сказкотерапевтами.
+            Издаем развивающие детские книги, созданные на основе правильных и психологически безопасных
+            историй.
           </p>
         </li>
         <li className={style.descriptionItem}>
           <img className={style.cloudImage} src={SecondCloud} alt="Разбираем популярные медиа-продукты" />
-          <p className={style.descriptionText}>Разбираем воспитательные посылы популярных медиа-продуктов.</p>
+          <p className={style.descriptionText}>
+            Рассказываем, как именно образы из книг, мультфильмов и других популярных медиа влияют на детей, а
+            значит &mdash; на наше будущее.
+          </p>
         </li>
         <li className={style.descriptionItem}>
           <img className={style.cloudImage} src={ThirdCloud} alt="Проводим вебинары и форумы" />
