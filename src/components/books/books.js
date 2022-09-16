@@ -1,11 +1,12 @@
-import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { Book } from '../book/book';
 import { BooksContext } from '../../services/AppContext';
 import style from './books.module.css';
 
 export function Books() {
-  const items = React.useContext(BooksContext);
+  const items = useContext(BooksContext);
+
   return (
     <section className={style.books}>
       <h1 className={style.title}>Книги издательства</h1>
@@ -18,7 +19,9 @@ export function Books() {
       </p>
       <div className={style.booksContainer}>
         {items.map((item) => (
-          <Book key={item.id} {...item} />
+          <Link className={style.link} key={item.id} to={`/books/${item.link_param}`}>
+            <Book {...item} />
+          </Link>
         ))}
       </div>
     </section>

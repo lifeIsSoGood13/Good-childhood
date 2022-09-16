@@ -1,3 +1,7 @@
+.link {
+  text-decoration: none;
+}
+
 .tagline {
   width: 300px;
   font-family: 'Raleway-Medium', Arial, sans-serif;

@@ -4,6 +4,10 @@
   margin: 70px auto 100px auto;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .booksContainer {
   display: grid;
   grid-template: auto / repeat(4, 1fr);

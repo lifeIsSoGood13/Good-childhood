@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import style from './main.module.css';
 import FirstCloud from '../../images/first-cloud.png';
 import SecondCloud from '../../images/second-cloud.png';
@@ -6,7 +7,7 @@ import ThirdCloud from '../../images/third-cloud.png';
 import { Book } from '../book/book';
 import { BooksContext } from '../../services/AppContext';
 
-export function Main() {
+export function Main({ openModal, setBookData }) {
   const items = React.useContext(BooksContext);
   return (
     <main>
@@ -38,12 +39,17 @@ export function Main() {
         <div></div>
         <div className={style.booksWrap}>
           {items.slice(0, 3).map((item) => (
-            <Book key={item.id} {...item} />
+            <Link className={style.link} key={item.id} to={`/books/${item.link_param}`}>
+              <Book key={item.id} {...item} openModal={openModal} />
+            </Link>
           ))}
         </div>
       </section>
       <section id="video" className={style.books}>
         <h2 className={style.headingVideos}>Видеоконтент проекта</h2>
+        <div id="my_playlist"></div>
+        <div id="vk_playlist_-147845620_5"></div>
+        <div id="vk_playlist_-147845620_508"></div>
         <iframe
           className={style.video}
           src="https://vk.com/video_ext.php?oid=-136337801&id=456239500&hash=a5083d250d3f61c2&hd=2"

@@ -15,16 +15,14 @@ export function Header(props) {
         <img className={style.navIcon} src={navigation} alt="Навигация" />
         <ul className={style.navigation}>
           <Link className={style.pageLink} to="/books">
-            <li className={style.navigationItem} onClick={props.removeBackground}>
-              Книги
-            </li>
+            <li className={style.navigationItem}>Книги</li>
           </Link>
-          <li className={style.navigationItem} onClick={props.addBackground}>
+          <li className={style.navigationItem}>
             <HashRouter className={style.navigationLink} to="/#video">
               Видеоконтент
             </HashRouter>
           </li>
-          <li className={style.navigationItem} onClick={props.removeBackground}>
+          <li className={style.navigationItem}>
             <Link className={style.navigationLink} to="/contacts">
               Контакты
             </Link>
@@ -32,7 +30,7 @@ export function Header(props) {
         </ul>
       </nav>
       <Link to="/">
-        <img className={style.logo} src={logo} alt="Доброе детство" onClick={props.addBackground} />
+        <img className={style.logo} src={logo} alt="Доброе детство" />
       </Link>
       <div className={style.contacts}>
         <span className={style.telephone}>+7 (495) 374-84-75</span>
