@@ -73,9 +73,9 @@
   margin: 0 11px 0 11px;
 }
 
-@media screen and (max-width: 1135px) {
+@media screen and (max-width: 1160px) {
   .footerWrap {
-    width: 620px;
+    max-width: 620px;
     justify-content: flex-start;
     padding-top: 28px;
   }
@@ -92,5 +92,38 @@
 
   .socialItems {
     order: 2;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .contacts {
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+  }
+
+  .email {
+    margin-left: 0;
+  }
+
+  .footerWrap {
+    padding-top: 41px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .email {
+    margin-top: 7px;
+  }
+
+  .socialItems {
+    margin-top: 33px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .footerWrap {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
