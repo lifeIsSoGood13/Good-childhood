@@ -14,9 +14,11 @@ export function Header(props) {
       <nav>
         <img className={style.navIcon} src={navigation} alt="Навигация" />
         <ul className={style.navigation}>
-          <Link className={style.pageLink} to="/books">
-            <li className={style.navigationItem}>Книги</li>
-          </Link>
+          <li className={style.navigationItem}>
+            <Link className={style.pageLink} to="/books">
+              Книги
+            </Link>
+          </li>
           <li className={style.navigationItem}>
             <HashRouter className={style.navigationLink} to="/#video">
               Видеоконтент
