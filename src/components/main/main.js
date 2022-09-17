@@ -7,7 +7,7 @@ import ThirdCloud from '../../images/third-cloud.png';
 import { Book } from '../book/book';
 import { BooksContext } from '../../services/AppContext';
 
-export function Main({ openModal, setBookData }) {
+export function Main({ jumpToTop }) {
   const items = React.useContext(BooksContext);
   return (
     <main>
@@ -43,7 +43,7 @@ export function Main({ openModal, setBookData }) {
         <div className={style.booksWrap}>
           {items.slice(0, 3).map((item) => (
             <Link className={style.link} key={item.id} to={`/books/${item.link_param}`}>
-              <Book key={item.id} {...item} openModal={openModal} />
+              <Book key={item.id} {...item} jumpToTop={jumpToTop} />
             </Link>
           ))}
         </div>

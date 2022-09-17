@@ -8,7 +8,14 @@ export function Book(props) {
   return (
     <article className={style.book} onClick={() => setBookData(props)}>
       <div className={style.imageWrap}>
-        <img className={style.image} src={props.image} alt={props.title} />
+        <img
+          className={style.image}
+          src={props.image}
+          alt={props.title}
+          onClick={() => {
+            props.jumpToTop();
+          }}
+        />
       </div>
       <h3 className={style.title}>{props.title}</h3>
       <p className={style.author}>

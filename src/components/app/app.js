@@ -15,6 +15,8 @@ export function App() {
   const [bookData, setBookData] = useState();
   const location = useLocation();
 
+  const jumpToTop = () => window.scrollTo({ top: 0 });
+
   React.useEffect(() => {
     fetch('https://632054139f82827dcf2a1cca.mockapi.io/books')
       .then((res) => {
@@ -34,7 +36,7 @@ export function App() {
       <DataContext.Provider value={setBookData}>
         <BooksContext.Provider value={items}>
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/" element={<Main jumpToTop={jumpToTop} />} />
             <Route path="/books" element={<Books />} />
             <Route path="/books/:name" element={<BookDetails bookData={bookData} />} />
             <Route path="/contacts" element={<Contacts />} />
