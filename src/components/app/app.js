@@ -7,15 +7,18 @@ import { Books } from '../books/books';
 import { BookDetails } from '../book-details/book-details';
 import { Footer } from '../footer/footer';
 import { Contacts } from '../contacts/contacts';
-import { BooksContext } from '../../services/AppContext';
-import { DataContext } from '../../services/AppContext';
+import { BooksListContext } from '../../services/AppContext';
 
 export function App() {
   const [items, setItems] = useState([]);
   const [bookData, setBookData] = useState();
   const location = useLocation();
 
-  const jumpToTop = () => window.scrollTo({ top: 0 });
+  const booksListData = {
+    books: items,
+    setBookData: setBookData,
+    jumpToTop: () => window.scrollTo({ top: 0 }),
+  };
 
   React.useEffect(() => {
     fetch('https://632054139f82827dcf2a1cca.mockapi.io/books')
@@ -33,16 +36,14 @@ export function App() {
   return (
     <div className={location.pathname === '/' ? style.App_background_image : style.App}>
       <Header />
-      <DataContext.Provider value={setBookData}>
-        <BooksContext.Provider value={items}>
-          <Routes>
-            <Route path="/" element={<Main jumpToTop={jumpToTop} />} />
-            <Route path="/books" element={<Books />} />
-            <Route path="/books/:name" element={<BookDetails bookData={bookData} />} />
-            <Route path="/contacts" element={<Contacts />} />
-          </Routes>
-        </BooksContext.Provider>
-      </DataContext.Provider>
+      <BooksListContext.Provider value={booksListData}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/books/:name" element={<BookDetails bookData={bookData} />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
+      </BooksListContext.Provider>
       <Footer />
     </div>
   );

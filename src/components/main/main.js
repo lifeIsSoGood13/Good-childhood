@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import style from './main.module.css';
 import FirstCloud from '../../images/first-cloud.png';
 import SecondCloud from '../../images/second-cloud.png';
 import ThirdCloud from '../../images/third-cloud.png';
 import { Book } from '../book/book';
-import { BooksContext } from '../../services/AppContext';
+import { BooksListContext } from '../../services/AppContext';
 
-export function Main({ jumpToTop }) {
-  const items = React.useContext(BooksContext);
+export function Main() {
+  const booksListData = useContext(BooksListContext);
+
   return (
     <main>
       <h1 className={style.tagline}>
@@ -41,9 +42,9 @@ export function Main({ jumpToTop }) {
         <h2 className={style.headingNewBooks}>Новинки издательства</h2>
         <div></div>
         <div className={style.booksWrap}>
-          {items.slice(0, 3).map((item) => (
+          {booksListData.books.slice(0, 3).map((item) => (
             <Link className={style.link} key={item.id} to={`/books/${item.link_param}`}>
-              <Book key={item.id} {...item} jumpToTop={jumpToTop} />
+              <Book key={item.id} {...item} />
             </Link>
           ))}
         </div>
