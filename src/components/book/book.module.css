@@ -41,6 +41,7 @@
   line-height: 21px;
   color: #616161;
 }
+
 @media screen and (max-width: 1190px) {
   .book {
     margin-right: 40px; 

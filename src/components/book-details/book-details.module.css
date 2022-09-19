@@ -1,0 +1,144 @@
+.bookDetails {
+  max-width: 1180px;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 40px 50px 40px 50px;
+}
+
+.bookDetailsWrapper {
+  display: flex;
+}
+
+.imageContainer {
+  width: 380px;
+  margin-right: 122px;
+}
+
+.image {
+  width: 100%;
+}
+
+.bookDescription {
+  max-width: 580px;
+}
+
+.title {
+  margin: 20px 0 30px 0;
+  font-family: 'RubikDirt-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: #BDC87A;
+}
+
+.author {
+  padding: 0;
+  margin: 0;
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.author span {
+  font-size: 16px;
+  line-height: 21px;
+  color: #616161;
+}
+
+.annotation {
+  margin: 30px 0;
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.prices {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttonWrapper {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonKonzeptual {
+  background: #BDC87A;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  transition: all .3s ease;
+}
+
+.buttonWildberries {
+  background: #CDADD4;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  transition: all .3s ease;
+}
+
+.buttonOzon {
+  background: #A0BDDF;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+  transition: all .3s ease;
+}
+
+.buttonKonzeptual:hover {
+  background: #D9E788;
+}
+
+.buttonWildberries:hover {
+  background: #E8C9EF;
+}
+
+.buttonOzon:hover {
+  background: #B6D6FC;
+}
+
+.price {
+  margin-top: 9px;
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #000000;
+}

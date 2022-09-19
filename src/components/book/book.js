@@ -6,7 +6,7 @@ export function Book(props) {
   const booksListData = useContext(BooksListContext);
 
   return (
-    <article className={style.book} onClick={() => booksListData.setBookData(props)}>
+    <article className={style.book}>
       <div className={style.imageWrap}>
         <img className={style.image} src={props.image} alt={props.title} onClick={booksListData.jumpToTop} />
       </div>

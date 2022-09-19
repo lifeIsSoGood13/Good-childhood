@@ -11,23 +11,17 @@ import { BooksListContext } from '../../services/AppContext';
 
 export function App() {
   const [items, setItems] = useState([]);
-  const [bookData, setBookData] = useState();
   const location = useLocation();
 
   const booksListData = {
     books: items,
-    setBookData: setBookData,
     jumpToTop: () => window.scrollTo({ top: 0 }),
   };
 
   React.useEffect(() => {
     fetch('https://632054139f82827dcf2a1cca.mockapi.io/books')
       .then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          return Promise.reject(`Ошибка ${res.status}`);
-        }
+        return res.ok ? res.json() : Promise.reject(`Ошибка ${res.status}`);
       })
       .then((data) => setItems(data))
       .catch((err) => console.error(err));
@@ -40,7 +34,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/books" element={<Books />} />
-          <Route path="/books/:name" element={<BookDetails bookData={bookData} />} />
+          <Route path="/books/:name" element={<BookDetails />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
       </BooksListContext.Provider>
