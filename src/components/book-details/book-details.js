@@ -25,37 +25,85 @@ export function BookDetails() {
             {book.author}
           </p>
           <p className={style.annotation}>{book.annotation}</p>
-          <ul className={style.prices}>
-            <li className={style.buttonWrapper}>
-              <button
-                className={style.buttonKonzeptual}
-                onClick={() => (window.location.href = `${book.konz_href}`)}
-              >
-                Купить в интеренет-магазине &laquo;Концептуал&raquo;
-              </button>
-              <span className={style.price}>{book.konz_price} руб.</span>
-            </li>
-            <li className={style.buttonWrapper}>
-              <button
-                className={style.buttonWildberries}
-                onClick={() => (window.location.href = `${book.wb_href}`)}
-              >
-                Wildberries
-              </button>
-              <span className={style.price}>{book.wb_price} руб.</span>
-            </li>
-            <li className={style.buttonWrapper}>
-              <button
-                className={style.buttonOzon}
-                onClick={() => (window.location.href = `${book.ozon_href}`)}
-              >
-                Ozon
-              </button>
-              <span className={style.price}>{book.ozon_price} руб.</span>
-            </li>
-          </ul>
+          <div className={style.descriptionPricesWrapper}>
+            <ul className={style.prices}>
+              <li className={style.buttonWrapper}>
+                <button
+                  className={style.buttonKonzeptual}
+                  onClick={() => (window.location.href = `${book.konz_href}`)}
+                >
+                  Купить в интеренет-магазине &laquo;Концептуал&raquo;
+                </button>
+                <span className={style.price}>{book.konz_price} руб.</span>
+              </li>
+              <li className={style.buttonWrapper}>
+                <button
+                  className={style.buttonWildberries}
+                  onClick={() => (window.location.href = `${book.wb_href}`)}
+                >
+                  Wildberries
+                </button>
+                <span className={style.price}>{book.wb_price} руб.</span>
+              </li>
+              <li className={style.buttonWrapper}>
+                <button
+                  className={style.buttonOzon}
+                  onClick={() => (window.location.href = `${book.ozon_href}`)}
+                >
+                  Ozon
+                </button>
+                <span className={style.price}>{book.ozon_price} руб.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <div className={style.afterDescriptionPricesWrapper}>
+        <ul className={style.prices}>
+          <li className={style.buttonWrapper}>
+            <button
+              className={style.buttonKonzeptual}
+              onClick={() => (window.location.href = `${book.konz_href}`)}
+            >
+              Купить в интеренет-магазине &laquo;Концептуал&raquo;
+            </button>
+            <span className={style.price}>{book.konz_price} руб.</span>
+          </li>
+          <li className={style.buttonWrapper}>
+            <button
+              className={style.buttonWildberries}
+              onClick={() => (window.location.href = `${book.wb_href}`)}
+            >
+              Wildberries
+            </button>
+            <span className={style.price}>{book.wb_price} руб.</span>
+          </li>
+          <li className={style.buttonWrapper}>
+            <button className={style.buttonOzon} onClick={() => (window.location.href = `${book.ozon_href}`)}>
+              Ozon
+            </button>
+            <span className={style.price}>{book.ozon_price} руб.</span>
+          </li>
+        </ul>
+      </div>
+      <div className={style.teachWrapper}>
+        <p className={style.mainTeach}>Научит ребенка</p>
+        <p className={style.teachDescription}>{book.teach}</p>
+      </div>
+      {book.has_video && (
+        <div id="video" className={style.video}>
+          <h2 className={style.headVideo}>Видео о книге</h2>
+          <div id="my_playlist"></div>
+          <div id="vk_playlist_-147845620_5"></div>
+          <div id="vk_playlist_-147845620_508"></div>
+          <iframe
+            src="https://vk.com/video_ext.php?oid=-136337801&id=456239473&hash=160120364c694f2f&hd=2"
+            width="100%"
+            height="664px"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+          ></iframe>
+        </div>
+      )}
     </section>
   );
 }
