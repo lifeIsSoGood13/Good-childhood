@@ -87,22 +87,24 @@ export function BookDetails() {
         </ul>
       </div>
       <div className={style.teachWrapper}>
-        <p className={style.mainTeach}>Научит ребенка</p>
+        <p className={style.mainTeach}>Научит ребёнка</p>
         <p className={style.teachDescription}>{book.teach}</p>
       </div>
       {book.has_video && (
-        <div id="video" className={style.video}>
+        <>
           <h2 className={style.headVideo}>Видео о книге</h2>
-          <div id="my_playlist"></div>
-          <div id="vk_playlist_-147845620_5"></div>
-          <div id="vk_playlist_-147845620_508"></div>
-          <iframe
-            src="https://vk.com/video_ext.php?oid=-136337801&id=456239473&hash=160120364c694f2f&hd=2"
-            width="100%"
-            height="664px"
-            allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
-          ></iframe>
-        </div>
+          <div id="video" className={style.video}>
+            <div id="my_playlist"></div>
+            <div id="vk_playlist_-147845620_5"></div>
+            <div id="vk_playlist_-147845620_508"></div>
+            <iframe
+              src="https://vk.com/video_ext.php?oid=-136337801&id=456239473&hash=160120364c694f2f&hd=2"
+              width="100%"
+              height="664px"
+              allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+            ></iframe>
+          </div>
+        </>
       )}
     </section>
   );
