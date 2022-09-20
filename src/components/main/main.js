@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import style from './main.module.css';
-import FirstCloud from '../../images/first-cloud.png';
-import SecondCloud from '../../images/second-cloud.png';
-import ThirdCloud from '../../images/third-cloud.png';
+import logo from '../../images/logo-white.png';
+import FirstCloud from '../../images/first-cloud.svg';
+import SecondCloud from '../../images/second-cloud.svg';
+import ThirdCloud from '../../images/third-cloud.svg';
 import { Book } from '../book/book';
 import { BooksListContext } from '../../services/AppContext';
 
@@ -11,7 +12,8 @@ export function Main() {
   const booksListData = useContext(BooksListContext);
 
   return (
-    <main>
+    <main className={style.main}>
+      <img className={style.logo} src={logo} alt="Доброе детство" />
       <h1 className={style.tagline}>
         Проект для повышения осознанности общества в&nbsp;деле воспитания детей
       </h1>
@@ -26,8 +28,8 @@ export function Main() {
         <li className={style.descriptionItem}>
           <img className={style.cloudImage} src={SecondCloud} alt="Разбираем популярные медиа-продукты" />
           <p className={style.descriptionText}>
-            Рассказываем, как именно образы из книг, мультфильмов и других популярных медиа влияют на детей, а
-            значит &mdash; на наше будущее.
+            Рассказываем, как именно образы из&nbsp;книг, мультфильмов и&nbsp;других популярных медиа влияют
+            на&nbsp;детей, а&nbsp;значит&nbsp;&mdash; на&nbsp;наше будущее.
           </p>
         </li>
         <li className={style.descriptionItem}>
@@ -39,28 +41,31 @@ export function Main() {
         </li>
       </ul>
       <section className={style.books}>
-        <h2 className={style.headingNewBooks}>Новинки издательства</h2>
-        <div></div>
-        <div className={style.booksWrap}>
-          {booksListData.books.slice(0, 3).map((item) => (
-            <Link className={style.link} key={item.id} to={`/books/${item.link_param}`}>
-              <Book key={item.id} {...item} />
-            </Link>
-          ))}
+        <h2 className={style.booksTitle}>Новинки издательства</h2>
+        <div className={style.booksContainer}>
+          {window.innerWidth <= 540
+            ? booksListData.books.slice(0, 2).map((item) => (
+                <Link className={style.link} key={item.id} to={`/books/${item.link_param}`}>
+                  <Book key={item.id} {...item} />
+                </Link>
+              ))
+            : booksListData.books.slice(0, 3).map((item) => (
+                <Link className={style.link} key={item.id} to={`/books/${item.link_param}`}>
+                  <Book key={item.id} {...item} />
+                </Link>
+              ))}
         </div>
       </section>
-      <section id="video" className={style.books}>
-        <h2 className={style.headingVideos}>Видеоконтент проекта</h2>
-        <div id="my_playlist"></div>
-        <div id="vk_playlist_-147845620_5"></div>
-        <div id="vk_playlist_-147845620_508"></div>
-        <iframe
-          className={style.video}
-          src="https://vk.com/video_ext.php?oid=-136337801&id=456239500&hash=a5083d250d3f61c2&hd=2"
-          width="100%"
-          height="664px"
-          allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
-        ></iframe>
+      <section className={style.video}>
+        <h2 className={style.videoTitle}>Видеоконтент проекта</h2>
+        <div className={style.videoContainer}>
+          <iframe
+            src="https://vk.com/video_ext.php?oid=-136337801&id=456239473&hash=160120364c694f2f&hd=2"
+            width="100%"
+            height="664px"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+          ></iframe>
+        </div>
       </section>
     </main>
   );

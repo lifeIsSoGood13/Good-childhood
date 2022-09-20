@@ -1,3 +1,16 @@
+.main {
+  max-width: 1180px;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 40px 50px 15px 50px;
+}
+
+.logo {
+  display: none;
+  width: 131px;
+  height: 131px;
+}
+
 .link {
   text-decoration: none;
 }
@@ -10,7 +23,7 @@
   font-size: 18px;
   line-height: 23px;
   color: #000000;
-  margin: 215px auto 0 auto;
+  margin: 173px auto 0 auto;
   text-align: center;
 }
 
@@ -32,7 +45,7 @@
 }
 
 .descriptionItem:nth-child(2) {
-  margin: 0 25px;
+  margin: 0 20px;
 }
 
 .cloudImage {
@@ -66,12 +79,7 @@
   width: 307px;
 }
 
-.books {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-
-.headingNewBooks {
+.booksTitle {
   margin: 120px 0 50px 0;
   font-family: 'RubikDirt-Regular', Arial, sans-serif;
   font-style: normal;
@@ -81,50 +89,37 @@
   color: #BD6D6E;
 }
 
-.booksWrap {
+.booksContainer {
   width: 100%;
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
 }
 
-.headingVideos {
-  composes: headingNewBooks;
+.videoTitle {
+  composes: booksTitle;
   margin: 50px 0 50px 0;
 }
 
-.video {
-  margin-bottom: 96px;
-  border: none;
+.videoContainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 80px;
 }
 
-@media screen and (max-width: 1190px) {
-  .descriptionItem:nth-child(2) {
-    margin: 0 12px;
-  }
-
-  .headingNewBooks {
-    margin-left: 5px;
-  }
-
-  .booksWrap {
-    justify-content: center;
-  }
-
-  .video {
-    width: 1170px;
-    height: 658px;
-    padding: 0 5px;
-  }
+.videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
 }
 
-@media screen and (max-width: 1160px) {
-  .tagline {
-    width: 247px;
-    font-size: 16px;
-    line-height: 21px;
-  }
-
+@media screen and (max-width: 1280px) {
   .description {
     margin-top: 120px;
     flex-direction: column;
@@ -151,8 +146,8 @@
   }
 
   .descriptionItem:nth-child(2) .descriptionText {
-    width: 312px;
-    margin: 37px 0 37px 12px;
+    width: 467px;
+    margin: 23px 0 28px 12px;
   }
 
   .descriptionItem:nth-child(1) .cloudImage {
@@ -160,27 +155,148 @@
   }
   
   .descriptionItem:nth-child(2) .cloudImage {
-    margin: 30px 0 30px 33px;
+    width: 78px;
+    height: 57px;
+    margin: 31px 0 30px 33px;
   }
   
   .descriptionItem:nth-child(3) .cloudImage {
     margin: 26px 0 42px 33px;
   }
 
-  .books {
-    width: 620px;
+  .booksTitle {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .main {
+    max-width: 620px;
+  }
+  
+  .tagline {
+    width: 247px;
+    font-size: 16px;
+    line-height: 21px;
   }
 
-  .headingNewBooks {
+  .booksTitle {
     margin-top: 90px;
   }
 
-  .headingVideos {
+  .videoTitle {
     margin-top: 50px;
   }
+}
 
-  .video {
-    width: 100%;
-    height: 348px;
+@media screen and (max-width: 720px) {
+  .description {
+    margin-top: 150px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .descriptionItem {
+    width: 500px;
+    min-height: 0;
+    background-color: transparent;
+  }
+
+  .descriptionItem:nth-child(2) {
+    margin: 30px 0;
+  }
+
+  .descriptionText {
+    width: 400px;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+  }
+  
+  .descriptionItem:nth-child(1) .descriptionText {
+    margin: 0;
+  }
+
+  .descriptionItem:nth-child(2) .descriptionText {
+    margin: 0;
+  }
+
+  .descriptionItem:nth-child(3) .descriptionText {
+    margin: 0;
+  }
+
+  .descriptionItem:nth-child(1) .cloudImage {
+    width: 69px;
+    height: 48px;
+    margin: 0 15px 0 0;
+  }
+  
+  .descriptionItem:nth-child(2) .cloudImage {
+    width: 69px;
+    height: 48px;
+    margin: 0 15px 0 0;
+  }
+  
+  .descriptionItem:nth-child(3) .cloudImage {
+    width: 58px;
+    height: 39px;
+    margin: 0 20px 0 0;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .main {
+    padding: 0 20px 10px 20px;
+    max-width: 320px;
+  }
+
+  .tagline {
+    margin-top: 213px;
+  }
+
+  .booksTitle {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .videoTitle {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 50px 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 496px) {
+  .logo {
+    margin-top: 29px;
+    display: block;
+  }
+  
+  .tagline {
+    text-align: start;
+    margin: 13px 0 0 0;
+    width: 300px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .description {
+    margin-top: 287px;
+  }
+
+  .descriptionItem {
+    width: 295px;
+  }
+  
+  .descriptionText {
+    width: 212px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .booksTitle {
+    margin-bottom: 31px;
   }
 }

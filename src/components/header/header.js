@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { HashLink as HashRouter } from 'react-router-hash-link';
 import style from './header.module.css';
 import logo from '../../images/logo-white.png';
-import telegram from '../../images/telegram.png';
-import vkontakte from '../../images/vk.png';
-import youtube from '../../images/youtube.png';
-import navigation from '../../images/header-menu.png';
+import telegram from '../../images/telegram.svg';
+import vkontakte from '../../images/vk.svg';
+import youtube from '../../images/youtube.svg';
+import navigation from '../../images/header-menu.svg';
 
 export function Header(props) {
   return (

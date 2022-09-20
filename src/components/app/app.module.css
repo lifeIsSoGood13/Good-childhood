@@ -18,3 +18,10 @@
 		background-image: url(../../images/bg-tablet.png);
   }
 }
+
+@media screen and (max-width: 496px) {
+  .App_background_image {
+    composes: App;
+		background-image: url(../../images/bg-mobile.png);
+  }
+}

@@ -1,6 +1,6 @@
 import style from './contacts.module.css';
-import Email from '../../images/email-page-contacts.png';
-import Phone from '../../images/phone-page-contacts.png';
+import Email from '../../images/email-page-contacts.svg';
+import Phone from '../../images/phone-page-contacts.svg';
 
 export function Contacts() {
   return (

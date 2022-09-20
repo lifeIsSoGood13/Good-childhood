@@ -24,6 +24,10 @@
   color: #494949;
 }
 
+.book:hover .title {
+  color:  #BD6D6E;
+}
+
 .author {
   max-width: 339px;
   padding: 0;
@@ -69,4 +73,27 @@
     flex-direction: column;
     font-size: 16px;
   }
+}
+
+@media screen and (max-width: 540px) {
+  .imageWrap {
+    width: 150px;
+  }
+
+  .title {
+    margin: 5px 0 13px 0;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  
+  .author {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .author span {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
 }

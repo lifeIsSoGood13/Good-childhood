@@ -32,3 +32,10 @@
   color: #000000;
   margin-bottom: 80px;
 }
+
+/* @media screen and (max-width: 720px) {
+  .booksContainer {
+    grid-template: auto / repeat(2, 1fr);
+    gap: 40px 40px;
+  }
+} */

@@ -1,8 +1,8 @@
-import Phone from '../../images/phone.png';
-import Email from '../../images/email.png';
-import FooterTg from '../../images/footer-telegram.png';
-import FooterVk from '../../images/footer-vk.png';
-import FooterYt from '../../images/footer-youtube.png';
+import Phone from '../../images/phone.svg';
+import Email from '../../images/email.svg';
+import FooterTg from '../../images/footer-telegram.svg';
+import FooterVk from '../../images/footer-vk.svg';
+import FooterYt from '../../images/footer-youtube.svg';
 import style from './footer.module.css';
 
 export function Footer() {
