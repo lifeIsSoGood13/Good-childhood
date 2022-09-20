@@ -119,6 +119,10 @@
   .socialItems {
     margin-top: 33px;
   }
+
+  .copyright {
+    margin-bottom: 41px;
+  }
 }
 
 @media screen and (max-width: 470px) {

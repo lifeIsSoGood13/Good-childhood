@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.footerWrap}>
-        <p className={style.copyright}>&copy;&nbsp;2022 Все права защищены &laquo;Доброе детство&raquo;</p>
+        <p className={style.copyright}>2022&nbsp;&copy; &laquo;Доброе детство&raquo;. Все права защищены</p>
         <div className={style.contacts}>
           <div className={style.phone}>
             <img src={Phone} alt="Телефон" />
