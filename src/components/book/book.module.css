@@ -59,7 +59,10 @@
 @media screen and (max-width: 1160px) {
   .book {
     max-width: 179px;
-    min-height: 285px;
+  }
+
+  .imageWrap {
+    max-width: 179px;
   }
 
   .title {
@@ -76,6 +79,10 @@
 }
 
 @media screen and (max-width: 540px) {
+  .book {
+    max-width: 150px;
+  }
+  
   .imageWrap {
     width: 150px;
   }
@@ -95,5 +102,4 @@
     font-size: 12px;
     line-height: 16px;
   }
-
 }

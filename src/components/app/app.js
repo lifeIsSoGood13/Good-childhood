@@ -12,8 +12,10 @@ import { BooksListContext } from '../../services/AppContext';
 export function App() {
   const [items, setItems] = useState([]);
   const location = useLocation();
+  const [size, setSize] = useState(0);
 
   const booksListData = {
+    size: size,
     books: items,
     jumpToTop: () => window.scrollTo({ top: 0 }),
   };
@@ -23,7 +25,10 @@ export function App() {
       .then((res) => {
         return res.ok ? res.json() : Promise.reject(`Ошибка ${res.status}`);
       })
-      .then((data) => setItems(data))
+      .then((data) => {
+        setItems(data);
+        window.addEventListener('resize', (e) => setSize(e.currentTarget.innerWidth));
+      })
       .catch((err) => console.error(err));
   }, []);
 
