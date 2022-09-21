@@ -88,15 +88,4 @@
     font-size: 25px;
     line-height: 30px;
   }
-
-  /* .booksContainer {
-    grid-template: auto / repeat(2, 1fr);
-    justify-items: center;
-  } */
-}
-
-@media screen and (max-width: 470px) {
-  .books {
-    /* padding: 0 20px; */
-  }
 }
