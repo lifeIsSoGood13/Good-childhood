@@ -63,7 +63,7 @@ export function BookDetails() {
           <li className={style.buttonWrapper}>
             <button
               className={style.buttonKonzeptual}
-              onClick={() => (window.location.href = `${book.konz_href}`)}
+              onClick={() => window.open(`${book.konz_href}`, '_blank')}
             >
               Купить в интеренет-магазине &laquo;Концептуал&raquo;
             </button>
@@ -72,14 +72,14 @@ export function BookDetails() {
           <li className={style.buttonWrapper}>
             <button
               className={style.buttonWildberries}
-              onClick={() => (window.location.href = `${book.wb_href}`)}
+              onClick={() => window.open(`${book.wb_href}`, '_blank')}
             >
               Wildberries
             </button>
             <span className={style.price}>{book.wb_price} руб.</span>
           </li>
           <li className={style.buttonWrapper}>
-            <button className={style.buttonOzon} onClick={() => (window.location.href = `${book.ozon_href}`)}>
+            <button className={style.buttonOzon} onClick={() => window.open(`${book.ozon_href}`, '_blank')}>
               Ozon
             </button>
             <span className={style.price}>{book.ozon_price} руб.</span>
