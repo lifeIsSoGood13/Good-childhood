@@ -7,12 +7,14 @@ import { Books } from '../books/books';
 import { BookDetails } from '../book-details/book-details';
 import { Footer } from '../footer/footer';
 import { Contacts } from '../contacts/contacts';
+import { Menu } from '../menu/menu';
 import { BooksListContext } from '../../services/AppContext';
 
 export function App() {
   const [items, setItems] = useState([]);
   const location = useLocation();
-  const [size, setSize] = useState(0);
+  const [size, setSize] = useState(1000);
+  const [menuActive, setMenuActive] = useState(false);
 
   const booksListData = {
     size: size,
@@ -34,7 +36,7 @@ export function App() {
 
   return (
     <div className={location.pathname === '/' ? style.App_background_image : style.App}>
-      <Header />
+      <Header setMenuActive={setMenuActive} />
       <BooksListContext.Provider value={booksListData}>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -44,6 +46,7 @@ export function App() {
         </Routes>
       </BooksListContext.Provider>
       <Footer />
+      <Menu menuActive={menuActive} setMenuActive={setMenuActive} />
     </div>
   );
 }

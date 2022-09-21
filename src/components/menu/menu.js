@@ -1,41 +1,34 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { HashLink as HashRouter } from 'react-router-hash-link';
-import style from './header.module.css';
+import style from './menu.module.css';
 import logo from '../../images/logo-white.png';
 import telegram from '../../images/telegram.svg';
 import vkontakte from '../../images/vk.svg';
 import youtube from '../../images/youtube.svg';
-import navigation from '../../images/header-menu.svg';
 
-export function Header({ setMenuActive }) {
+export function Menu({ menuActive, setMenuActive }) {
   return (
-    <header className={style.header}>
-      <nav>
-        <img className={style.navIcon} src={navigation} alt="Навигация" onClick={() => setMenuActive(true)} />
+    <div className={menuActive ? style.menuOverlayActive : style.menuOverlay}>
+      <div className={menuActive ? style.menuActive : style.menu}>
+        <button className={style.closeButton} type="button" onClick={() => setMenuActive(false)}></button>
+        <img className={style.logo} src={logo} alt="Логотоп" />
         <ul className={style.navigation}>
-          <li className={style.navigationItem}>
-            <Link className={style.pageLink} to="/books">
+          <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
+            <Link className={style.navigationLink} to="/">
+              Главная
+            </Link>
+          </li>
+          <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
+            <Link className={style.navigationLink} to="/books">
               Книги
             </Link>
           </li>
-          <li className={style.navigationItem}>
-            <HashRouter className={style.navigationLink} to="/#video">
-              Видеоконтент
-            </HashRouter>
-          </li>
-          <li className={style.navigationItem}>
+          <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
             <Link className={style.navigationLink} to="/contacts">
               Контакты
             </Link>
           </li>
         </ul>
-      </nav>
-      <Link to="/">
-        <img className={style.logo} src={logo} alt="Доброе детство" />
-      </Link>
-      <div className={style.contacts}>
-        <span className={style.telephone}>+7 (495) 374-84-75</span>
+        <p className={style.phone}>+7 (495) 374-84-75</p>
         <ul className={style.social}>
           <li className={style.socialItem}>
             <a
@@ -65,11 +58,10 @@ export function Header({ setMenuActive }) {
               rel="noreferrer"
             >
               <img src={youtube} alt="Ютуб" />
-              <span className={style.ourChannel}>Наш канал</span>
             </a>
           </li>
         </ul>
       </div>
-    </header>
+    </div>
   );
 }
