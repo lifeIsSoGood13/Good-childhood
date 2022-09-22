@@ -3,14 +3,9 @@
   "name": "Издательство &laquo;Доброе детство&raquo;",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo.png",
+      "src": "ogg.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "252x189"
     }
   ],
   "start_url": "https://dobroedetstvo.ru/",
