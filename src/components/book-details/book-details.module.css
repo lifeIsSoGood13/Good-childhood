@@ -5,6 +5,11 @@
   padding: 40px 50px;
 }
 
+.link {
+  text-decoration: none;
+  margin: 0;;
+}
+
 .bookDetailsWrapper {
   display: flex;
 }
@@ -76,6 +81,7 @@
 }
 
 .buttonKonzeptual {
+  margin: 0;
   background: #BDC87A;
   border: none;
   border-radius: 10px;
@@ -91,6 +97,7 @@
 }
 
 .buttonWildberries {
+  margin: 0;
   background: #CDADD4;
   border: none;
   border-radius: 10px;
@@ -106,6 +113,7 @@
 }
 
 .buttonOzon {
+  margin: 0;
   background: #A0BDDF;
   border: none;
   border-radius: 10px;

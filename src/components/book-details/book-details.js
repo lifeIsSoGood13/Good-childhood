@@ -28,30 +28,23 @@ export function BookDetails() {
           <div className={style.descriptionPricesWrapper}>
             <ul className={style.prices}>
               <li className={style.buttonWrapper}>
-                <button
-                  className={style.buttonKonzeptual}
-                  onClick={() => (window.location.href = `${book.konz_href}`)}
-                >
-                  Купить в интеренет-магазине &laquo;Концептуал&raquo;
-                </button>
+                <a className={style.link} href={book.konz_href} target="_blank">
+                  <p className={style.buttonKonzeptual}>
+                    Купить в интеренет-магазине &laquo;Концептуал&raquo;
+                  </p>
+                </a>
                 <span className={style.price}>{book.konz_price} руб.</span>
               </li>
               <li className={style.buttonWrapper}>
-                <button
-                  className={style.buttonWildberries}
-                  onClick={() => (window.location.href = `${book.wb_href}`)}
-                >
-                  Wildberries
-                </button>
+                <a className={style.link} href={book.wb_href} target="_blank">
+                  <p className={style.buttonWildberries}>Wildberries</p>
+                </a>
                 <span className={style.price}>{book.wb_price} руб.</span>
               </li>
               <li className={style.buttonWrapper}>
-                <button
-                  className={style.buttonOzon}
-                  onClick={() => (window.location.href = `${book.ozon_href}`)}
-                >
-                  Ozon
-                </button>
+                <a className={style.link} href={book.ozon_href} target="_blank">
+                  <p className={style.buttonOzon}>Ozon</p>
+                </a>
                 <span className={style.price}>{book.ozon_price} руб.</span>
               </li>
             </ul>
