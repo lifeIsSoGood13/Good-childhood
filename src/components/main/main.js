@@ -62,6 +62,7 @@ export function Main() {
         </h2>
         <div className={style.videoContainer}>
           <iframe
+            title="Видеоконтент проекта"
             src="https://vk.com/video_ext.php?oid=-136337801&id=456239473&hash=160120364c694f2f&hd=2"
             width="100%"
             height="664px"
