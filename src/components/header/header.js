@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HashLink as HashRouter } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import style from './header.module.css';
 import logo from '../../images/logo-white.png';
 import telegram from '../../images/telegram.svg';
@@ -20,9 +20,13 @@ export function Header({ setMenuActive }) {
             </Link>
           </li>
           <li className={style.navigationItem}>
-            <HashRouter className={style.navigationLink} to="/#video">
+            <HashLink
+              className={style.pageLink}
+              to="/#video"
+              scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            >
               Видеоконтент
-            </HashRouter>
+            </HashLink>
           </li>
           <li className={style.navigationItem}>
             <Link className={style.navigationLink} to="/contacts">

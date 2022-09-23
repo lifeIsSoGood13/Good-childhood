@@ -8,7 +8,7 @@
       "sizes": "252x189"
     }
   ],
-  "start_url": "https://dobroedetstvo.ru/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

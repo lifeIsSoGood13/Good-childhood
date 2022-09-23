@@ -57,7 +57,9 @@ export function Main() {
         </div>
       </section>
       <section className={style.video}>
-        <h2 className={style.videoTitle}>Видеоконтент проекта</h2>
+        <h2 id="video" className={style.videoTitle}>
+          Видеоконтент проекта
+        </h2>
         <div className={style.videoContainer}>
           <iframe
             src="https://vk.com/video_ext.php?oid=-136337801&id=456239473&hash=160120364c694f2f&hd=2"
