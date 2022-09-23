@@ -95,6 +95,7 @@ export function BookDetails() {
             <div id="vk_playlist_-147845620_5"></div>
             <div id="vk_playlist_-147845620_508"></div>
             <iframe
+              title="Видео о книге"
               src="https://vk.com/video_ext.php?oid=-136337801&id=456239473&hash=160120364c694f2f&hd=2"
               width="100%"
               height="664px"
