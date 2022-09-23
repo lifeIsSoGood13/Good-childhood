@@ -29,9 +29,7 @@ export function BookDetails() {
             <ul className={style.prices}>
               <li className={style.buttonWrapper}>
                 <a className={style.link} href={book.konz_href} target="_blank">
-                  <p className={style.buttonKonzeptual}>
-                    Купить в интеренет-магазине &laquo;Концептуал&raquo;
-                  </p>
+                  <p className={style.buttonKonzeptual}>Купить в &laquo;Концептуале&raquo;</p>
                 </a>
                 <span className={style.price}>{book.konz_price} руб.</span>
               </li>
@@ -47,6 +45,12 @@ export function BookDetails() {
                 </a>
                 <span className={style.price}>{book.ozon_price} руб.</span>
               </li>
+              <li className={style.buttonWrapper}>
+                <a className={style.link} href={book.vk_href} target="_blank">
+                  <p className={style.buttonVkontakte}>ВКонтакте</p>
+                </a>
+                <span className={style.price}>{book.vk_price} руб.</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -54,28 +58,28 @@ export function BookDetails() {
       <div className={style.afterDescriptionPricesWrapper}>
         <ul className={style.prices}>
           <li className={style.buttonWrapper}>
-            <button
-              className={style.buttonKonzeptual}
-              onClick={() => window.open(`${book.konz_href}`, '_blank')}
-            >
-              Купить в интеренет-магазине &laquo;Концептуал&raquo;
-            </button>
+            <a className={style.link} href={book.konz_href} target="_blank">
+              <p className={style.buttonKonzeptual}>Купить в &laquo;Концептуале&raquo;</p>
+            </a>
             <span className={style.price}>{book.konz_price} руб.</span>
           </li>
           <li className={style.buttonWrapper}>
-            <button
-              className={style.buttonWildberries}
-              onClick={() => window.open(`${book.wb_href}`, '_blank')}
-            >
-              Wildberries
-            </button>
+            <a className={style.link} href={book.wb_href} target="_blank">
+              <p className={style.buttonWildberries}>Wildberries</p>
+            </a>
             <span className={style.price}>{book.wb_price} руб.</span>
           </li>
           <li className={style.buttonWrapper}>
-            <button className={style.buttonOzon} onClick={() => window.open(`${book.ozon_href}`, '_blank')}>
-              Ozon
-            </button>
+            <a className={style.link} href={book.ozon_href} target="_blank">
+              <p className={style.buttonOzon}>Ozon</p>
+            </a>
             <span className={style.price}>{book.ozon_price} руб.</span>
+          </li>
+          <li className={style.buttonWrapper}>
+            <a className={style.link} href={book.vk_href} target="_blank">
+              <p className={style.buttonVkontakte}>ВКонтакте</p>
+            </a>
+            <span className={style.price}>{book.vk_price} руб.</span>
           </li>
         </ul>
       </div>
