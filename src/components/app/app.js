@@ -8,6 +8,7 @@ import { BookDetails } from '../book-details/book-details';
 import { Footer } from '../footer/footer';
 import { Contacts } from '../contacts/contacts';
 import { Menu } from '../menu/menu';
+import { PopupWithCover } from '../popup-with-cover/popup-with-cover';
 import { BooksListContext } from '../../services/AppContext';
 
 export function App() {
@@ -15,8 +16,12 @@ export function App() {
   const location = useLocation();
   const [size, setSize] = useState(1000);
   const [menuActive, setMenuActive] = useState(false);
+  const [bookImage, setBookImage] = useState();
+  const [popupOpen, setPopupOpen] = useState(false);
 
   const booksListData = {
+    setPopupOpen: setPopupOpen,
+    setBookImage: setBookImage,
     size: size,
     books: items,
     jumpToTop: () => window.scrollTo({ top: 0 }),
@@ -35,18 +40,21 @@ export function App() {
   }, []);
 
   return (
-    <div className={location.pathname === '/' ? style.App_background_image : style.App}>
-      <Header setMenuActive={setMenuActive} />
-      <BooksListContext.Provider value={booksListData}>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/books" element={<Books />} />
-          <Route path="/books/:name" element={<BookDetails />} />
-          <Route path="/contacts" element={<Contacts />} />
-        </Routes>
-      </BooksListContext.Provider>
-      <Footer />
-      <Menu menuActive={menuActive} setMenuActive={setMenuActive} />
-    </div>
+    <React.Fragment>
+      <div className={location.pathname === '/' ? style.App_background_image : style.App}>
+        <Header setMenuActive={setMenuActive} />
+        <BooksListContext.Provider value={booksListData}>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/books" element={<Books />} />
+            <Route path="/books/:name" element={<BookDetails />} />
+            <Route path="/contacts" element={<Contacts />} />
+          </Routes>
+        </BooksListContext.Provider>
+        <Footer />
+        <Menu menuActive={menuActive} setMenuActive={setMenuActive} />
+      </div>
+      {popupOpen && <PopupWithCover bookImage={bookImage} setPopupOpen={setPopupOpen} />}
+    </React.Fragment>
   );
 }

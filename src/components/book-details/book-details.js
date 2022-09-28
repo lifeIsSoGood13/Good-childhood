@@ -15,7 +15,13 @@ export function BookDetails() {
   return (
     <section className={style.bookDetails}>
       <div className={style.bookDetailsWrapper}>
-        <div className={style.imageContainer}>
+        <div
+          className={style.imageContainer}
+          onClick={() => {
+            booksListData.setPopupOpen(true);
+            booksListData.setBookImage(book.image);
+          }}
+        >
           <img className={style.image} src={book.image} alt={book.title} />
         </div>
         <div className={style.bookDescription}>

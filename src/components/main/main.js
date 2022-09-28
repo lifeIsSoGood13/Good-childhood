@@ -42,6 +42,7 @@ export function Main() {
       </ul>
       <section className={style.books}>
         <h2 className={style.booksTitle}>Новинки издательства</h2>
+        {console.log(booksListData.size)}
         <div className={style.booksContainer}>
           {booksListData.size <= 665
             ? booksListData.books.slice(0, 2).map((item) => (

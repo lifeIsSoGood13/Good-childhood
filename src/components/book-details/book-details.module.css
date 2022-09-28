@@ -20,7 +20,13 @@
 }
 
 .image {
+  cursor: pointer;
   width: 100%;
+  transition: all .2s ease-in-out;
+}
+
+.image:hover {
+  opacity: .8;
 }
 
 .bookDescription {
