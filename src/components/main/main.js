@@ -63,10 +63,10 @@ export function Main() {
         <div className={style.videoContainer}>
           <iframe
             title="Видеоконтент проекта"
-            src="https://vk.com/video_ext.php?oid=-136337801&id=456239473&hash=160120364c694f2f&hd=2"
+            src="https://www.youtube-nocookie.com/embed/videoseries?list=PLi6aBhEuWKGOuI9HG_K2nEqR7GfuB59sL"
             width="100%"
             height="664px"
-            allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+            allow="autoplay; encrypted-media; clipboard-write; fullscreen; gyroscope; picture-in-picture;"
           ></iframe>
         </div>
       </section>
