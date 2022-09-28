@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import style from './menu.module.css';
 import logo from '../../images/logo-white.png';
 import telegram from '../../images/telegram.svg';
@@ -21,6 +22,11 @@ export function Menu({ menuActive, setMenuActive }) {
             <Link className={style.navigationLink} to="/books">
               Книги
             </Link>
+          </li>
+          <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
+            <HashLink className={style.navigationLink} to="/#video">
+              Видеоконтент
+            </HashLink>
           </li>
           <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
             <Link className={style.navigationLink} to="/contacts">
