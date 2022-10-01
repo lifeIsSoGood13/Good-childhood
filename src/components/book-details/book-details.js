@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import style from './book-details.module.css';
 import { BooksListContext } from '../../services/AppContext';
+import { ImagesCarousel } from '../images-carousel/images-carousel';
 
 export function BookDetails() {
   const booksListData = useContext(BooksListContext);
@@ -93,6 +94,7 @@ export function BookDetails() {
         <p className={style.mainTeach}>Научит ребёнка</p>
         <p className={style.teachDescription}>{book.teach}</p>
       </div>
+      <ImagesCarousel book={book} />
       {book.has_video && (
         <>
           <h2 className={style.headVideo}>Видео о книге</h2>
