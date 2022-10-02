@@ -166,14 +166,14 @@
   }
 
   .leftButton {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   background-image: url('../../images/arrow-green-left-small.svg');
 }
 
 .leftButtonActive {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   background-image: url('../../images/arrow-white-right-small.svg');
   transform: rotate(180deg);
 }
