@@ -8,7 +8,7 @@ export function Popup({ setPopupOpen, children }) {
   useEffect(() => {
     document.addEventListener('keydown', handleCloseEsc);
     return () => document.removeEventListener('keydown', handleCloseEsc);
-  }, []);
+  });
 
   const handleCloseEsc = (e) => e.key === 'Escape' && setPopupOpen(false);
 
