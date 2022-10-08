@@ -43,7 +43,7 @@ export function Main() {
       <section className={style.books}>
         <h2 className={style.booksTitle}>Новинки издательства</h2>
         <div className={style.booksContainer}>
-          {booksListData.size <= 665
+          {window.innerWidth <= 665
             ? booksListData.books.slice(0, 2).map((item) => (
                 <Link className={style.link} key={item.id} to={`/books/${item.link_param}`}>
                   <Book key={item.id} {...item} />
