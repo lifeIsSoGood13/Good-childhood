@@ -10,6 +10,8 @@ export function Logo({ position }) {
         return style.position_main;
       case 'menu':
         return style.position_menu;
+      default:
+        return;
     }
   };
 
