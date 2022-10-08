@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Logo } from '../logo/logo';
 import style from './menu.module.css';
-import logo from '../../images/logo-white.png';
 import telegram from '../../images/telegram.svg';
 import vkontakte from '../../images/vk.svg';
 import youtube from '../../images/youtube.svg';
