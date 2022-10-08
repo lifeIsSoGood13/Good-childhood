@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import { Logo } from '../logo/logo';
 import style from './menu.module.css';
 import logo from '../../images/logo-white.png';
 import telegram from '../../images/telegram.svg';
@@ -11,7 +12,7 @@ export function Menu({ menuActive, setMenuActive }) {
     <div className={menuActive ? style.menuOverlayActive : style.menuOverlay}>
       <div className={menuActive ? style.menuActive : style.menu}>
         <button className={style.closeButton} type="button" onClick={() => setMenuActive(false)}></button>
-        <img className={style.logo} src={logo} alt="Логотоп" />
+        <Logo position={'menu'} />
         <ul className={style.navigation}>
           <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
             <Link className={style.navigationLink} to="/">

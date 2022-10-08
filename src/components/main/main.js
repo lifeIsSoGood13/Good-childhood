@@ -1,19 +1,19 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import style from './main.module.css';
-import logo from '../../images/logo-white.png';
 import FirstCloud from '../../images/first-cloud.svg';
 import SecondCloud from '../../images/second-cloud.svg';
 import ThirdCloud from '../../images/third-cloud.svg';
 import { Book } from '../book/book';
 import { BooksListContext } from '../../services/AppContext';
+import { Logo } from '../logo/logo';
 
 export function Main() {
   const booksListData = useContext(BooksListContext);
 
   return (
     <main className={style.main}>
-      <img className={style.logo} src={logo} alt="Доброе детство" />
+      <Logo position={'main'} />
       <h1 className={style.tagline}>
         Проект для повышения осознанности общества в&nbsp;деле воспитания детей
       </h1>

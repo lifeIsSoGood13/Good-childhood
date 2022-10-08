@@ -1,4 +1,4 @@
-.header {
+.container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 40px 50px 0 50px;
@@ -7,6 +7,13 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+
+.text {
+  font-family: 'Raleway-Regular', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
 }
 
 .navIcon {
@@ -19,21 +26,13 @@
   display: flex;
 }
 
-.pageLink {
-  text-decoration: none;
-  color: #000000;
-}
-
 .navigationItem {
   cursor: pointer;
-  margin-right: 55px;
   list-style-type: none;
-  font-family: 'Raleway-Regular', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  composes: text;
   font-size: 18px;
   line-height: 23px;
-  color: #000000;
+  margin-right: 55px;
   position: relative;
 }
 
@@ -47,18 +46,13 @@
   background-color: #000000;
 }
 
-.navigationLink {
-  text-decoration: none;
-  color: #000000;
-}
-
 .navigationItem:last-of-type{
   margin-right: 25px;
 }
 
-.logo {
-  width: 145px;
-  height: 145px;
+.navigationLink {
+  text-decoration: none;
+  color: #000000;
 }
 
 .contacts {
@@ -68,18 +62,26 @@
 }
 
 .telephone {
-  font-family: 'Raleway-Regular', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  cursor: pointer;
+  composes: text;
+  font-feature-settings: 'pnum' on, 'lnum' on;
   font-size: 20px;
   line-height: 26px;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  color: #000000;
   margin-right: 34px;
 }
 
 .social {
   composes: contacts;
+}
+
+.socialItem {
+  cursor: pointer;
+  list-style-type: none;
+  margin-right: 13px;
+}
+
+.socialItem:last-of-type {
+  margin-right: 0;
 }
 
 .socialLink {
@@ -89,40 +91,18 @@
   align-items: center;
 }
 
-.socialItem {
-  cursor: pointer;
-  list-style-type: none;
-
-  margin-right: 13px;
-}
-
-.socialItem:last-of-type {
-  margin-right: 0;
-}
-
 .ourChannel {
-  font-family: 'Raleway-Regular', Arial, sans-serif;
-  margin-left: 8px;
-  font-style: normal;
-  font-weight: 400;
+  composes: text;
+  font-feature-settings: 'pnum' on, 'lnum' on;
   font-size: 16px;
   line-height: 21px;
-  font-feature-settings: 'pnum' on, 'lnum' on;
-  color: #000000;
+  margin-left: 8px;
 }
 
 @media screen and (max-width: 1160px) {
-  .header {
+  .container {
     max-width: 620px;
     padding-top: 43px;
-  }
-
-  .logo {
-    width: 91px;
-    height: 91px;
-    position: absolute;
-    top: 14px;
-    right: 43.8%;
   }
 
   .navIcon {
@@ -132,20 +112,14 @@
   .navigation {
     display: none;
   }
-  
+
   .telephone {
     display: none;
   }
 }
 
-@media screen and (max-width: 665px) {
-  .logo {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 470px) {
-  .header {
+  .container {
     padding: 20px 20px 0 20px;
   }
 }
