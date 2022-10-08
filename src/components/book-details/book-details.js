@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import style from './book-details.module.css';
+import Soon from '../../images/soon.svg';
 import { BooksListContext } from '../../services/AppContext';
 import { ImagesCarousel } from '../images-carousel/images-carousel';
 
@@ -24,6 +25,7 @@ export function BookDetails() {
           }}
         >
           <img className={style.image} src={book.image} alt={book.title} />
+          {!book.on_sale && <img className={style.soonImage} src={Soon} alt="Скоро" />}
         </div>
         <div className={style.bookDescription}>
           <h1 className={style.title}>{book.title}</h1>
@@ -32,64 +34,68 @@ export function BookDetails() {
             {book.author}
           </p>
           <p className={style.annotation}>{book.annotation}</p>
-          <div className={style.descriptionPricesWrapper}>
-            <ul className={style.prices}>
-              <li className={style.buttonWrapper}>
-                <a className={style.link} href={book.konz_href} target="_blank" rel="noreferrer">
-                  <p className={style.buttonKonzeptual}>Купить в &laquo;Концептуале&raquo;</p>
-                </a>
-                <span className={style.price}>{book.konz_price} руб.</span>
-              </li>
-              <li className={style.buttonWrapper}>
-                <a className={style.link} href={book.wb_href} target="_blank" rel="noreferrer">
-                  <p className={style.buttonWildberries}>Wildberries</p>
-                </a>
-                <span className={style.price}>{book.wb_price} руб.</span>
-              </li>
-              <li className={style.buttonWrapper}>
-                <a className={style.link} href={book.ozon_href} target="_blank" rel="noreferrer">
-                  <p className={style.buttonOzon}>Ozon</p>
-                </a>
-                <span className={style.price}>{book.ozon_price} руб.</span>
-              </li>
-              <li className={style.buttonWrapper}>
-                <a className={style.link} href={book.vk_href} target="_blank" rel="noreferrer">
-                  <p className={style.buttonVkontakte}>ВКонтакте</p>
-                </a>
-                <span className={style.price}>{book.vk_price} руб.</span>
-              </li>
-            </ul>
-          </div>
+          {book.on_sale && (
+            <div className={style.descriptionPricesWrapper}>
+              <ul className={style.prices}>
+                <li className={style.buttonWrapper}>
+                  <a className={style.link} href={book.konz_href} target="_blank" rel="noreferrer">
+                    <p className={style.buttonKonzeptual}>Купить в &laquo;Концептуале&raquo;</p>
+                  </a>
+                  <span className={style.price}>{book.konz_price} руб.</span>
+                </li>
+                <li className={style.buttonWrapper}>
+                  <a className={style.link} href={book.wb_href} target="_blank" rel="noreferrer">
+                    <p className={style.buttonWildberries}>Wildberries</p>
+                  </a>
+                  <span className={style.price}>{book.wb_price} руб.</span>
+                </li>
+                <li className={style.buttonWrapper}>
+                  <a className={style.link} href={book.ozon_href} target="_blank" rel="noreferrer">
+                    <p className={style.buttonOzon}>Ozon</p>
+                  </a>
+                  <span className={style.price}>{book.ozon_price} руб.</span>
+                </li>
+                <li className={style.buttonWrapper}>
+                  <a className={style.link} href={book.vk_href} target="_blank" rel="noreferrer">
+                    <p className={style.buttonVkontakte}>ВКонтакте</p>
+                  </a>
+                  <span className={style.price}>{book.vk_price} руб.</span>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
-      <div className={style.afterDescriptionPricesWrapper}>
-        <ul className={style.prices}>
-          <li className={style.buttonWrapper}>
-            <a className={style.link} href={book.konz_href} target="_blank" rel="noreferrer">
-              <p className={style.buttonKonzeptual}>Купить в &laquo;Концептуале&raquo;</p>
-            </a>
-            <span className={style.price}>{book.konz_price} руб.</span>
-          </li>
-          <li className={style.buttonWrapper}>
-            <a className={style.link} href={book.wb_href} target="_blank" rel="noreferrer">
-              <p className={style.buttonWildberries}>Wildberries</p>
-            </a>
-            <span className={style.price}>{book.wb_price} руб.</span>
-          </li>
-          <li className={style.buttonWrapper}>
-            <a className={style.link} href={book.ozon_href} target="_blank" rel="noreferrer">
-              <p className={style.buttonOzon}>Ozon</p>
-            </a>
-            <span className={style.price}>{book.ozon_price} руб.</span>
-          </li>
-          <li className={style.buttonWrapper}>
-            <a className={style.link} href={book.vk_href} target="_blank" rel="noreferrer">
-              <p className={style.buttonVkontakte}>ВКонтакте</p>
-            </a>
-            <span className={style.price}>{book.vk_price} руб.</span>
-          </li>
-        </ul>
-      </div>
+      {book.on_sale && (
+        <div className={style.afterDescriptionPricesWrapper}>
+          <ul className={style.prices}>
+            <li className={style.buttonWrapper}>
+              <a className={style.link} href={book.konz_href} target="_blank" rel="noreferrer">
+                <p className={style.buttonKonzeptual}>Купить в &laquo;Концептуале&raquo;</p>
+              </a>
+              <span className={style.price}>{book.konz_price} руб.</span>
+            </li>
+            <li className={style.buttonWrapper}>
+              <a className={style.link} href={book.wb_href} target="_blank" rel="noreferrer">
+                <p className={style.buttonWildberries}>Wildberries</p>
+              </a>
+              <span className={style.price}>{book.wb_price} руб.</span>
+            </li>
+            <li className={style.buttonWrapper}>
+              <a className={style.link} href={book.ozon_href} target="_blank" rel="noreferrer">
+                <p className={style.buttonOzon}>Ozon</p>
+              </a>
+              <span className={style.price}>{book.ozon_price} руб.</span>
+            </li>
+            <li className={style.buttonWrapper}>
+              <a className={style.link} href={book.vk_href} target="_blank" rel="noreferrer">
+                <p className={style.buttonVkontakte}>ВКонтакте</p>
+              </a>
+              <span className={style.price}>{book.vk_price} руб.</span>
+            </li>
+          </ul>
+        </div>
+      )}
       <div className={style.teachWrapper}>
         <p className={style.mainTeach}>Научит ребёнка</p>
         <p className={style.teachDescription}>{book.teach}</p>

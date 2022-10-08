@@ -5,11 +5,22 @@
 .imageWrap {
   max-width: 339px;
   max-height: 540px;
+  position: relative;
 }
 
 .image {
   width: 100%;
   cursor: pointer;
+}
+
+.soonImage {
+  position: absolute;
+  border-radius: 50%;
+  top: -20px;
+  right: -20px;
+  padding: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 1px #959595;
 }
 
 .title {
@@ -63,6 +74,12 @@
 
   .imageWrap {
     max-width: 179px;
+  }
+
+  .soonImage {
+    width: 28%;
+    top: -15px;
+    right: -15px;
   }
 
   .title {

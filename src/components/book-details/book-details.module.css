@@ -17,6 +17,7 @@
 .imageContainer {
   width: 380px;
   margin-right: 122px;
+  position: relative;
 }
 
 .image {
@@ -27,6 +28,16 @@
 
 .image:hover {
   opacity: .8;
+}
+
+.soonImage {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 1px #959595;
 }
 
 .bookDescription {
@@ -251,6 +262,12 @@
     margin-right: 20px;
   }
 
+  .soonImage {
+    width: 25%;
+    top: -20px;
+    right: -13px;
+  }
+
   .bookDescription {
     max-width: 387px;
   }
@@ -285,7 +302,7 @@
   }
 
   .teachWrapper {
-    margin: 50px 0 15px 0;
+    margin: 40px 0 15px 0;
     min-height: 100px;
     flex-direction: column;
     align-items: start;
@@ -324,6 +341,12 @@
     align-items: center;
   }
 
+  .soonImage {
+    width: 28%;
+    top: -18px;
+    right: -18px;
+  }
+
   .title {
     margin-top: 20px;
   }
@@ -333,11 +356,12 @@
   }
 
   .annotation {
-    margin: 20px 0 30px 0;
+    margin: 20px 0 10px 0;
   }
 
   .afterDescriptionPricesWrapper {
-    margin-top: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
   }
 
   .prices {
