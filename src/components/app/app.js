@@ -8,6 +8,7 @@ import { BookDetails } from '../book-details/book-details';
 import { Footer } from '../footer/footer';
 import { Contacts } from '../contacts/contacts';
 import { Menu } from '../menu/menu';
+import { NotFound } from '../not-found/not-found';
 import { PopupWithCover } from '../popup-with-cover/popup-with-cover';
 import { BooksListContext } from '../../services/AppContext';
 
@@ -49,6 +50,7 @@ export function App() {
             <Route path="/books" element={<Books />} />
             <Route path="/books/:name" element={<BookDetails />} />
             <Route path="/contacts" element={<Contacts />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </BooksListContext.Provider>
         <Footer />
