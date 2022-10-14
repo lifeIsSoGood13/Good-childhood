@@ -2,70 +2,49 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { Logo } from '../logo/logo';
 import style from './menu.module.css';
-import telegram from '../../images/telegram.svg';
-import vkontakte from '../../images/vk.svg';
-import youtube from '../../images/youtube.svg';
+import { menuNavigationData, menuSocialData } from '../../utils/constants';
 
 export function Menu({ menuActive, setMenuActive }) {
   return (
-    <div className={menuActive ? style.menuOverlayActive : style.menuOverlay}>
-      <div className={menuActive ? style.menuActive : style.menu}>
+    <div className={menuActive ? style.overlayActive : style.overlay}>
+      <div className={menuActive ? style.containerActive : style.container}>
         <button className={style.closeButton} type="button" onClick={() => setMenuActive(false)}></button>
         <Logo position={'menu'} />
         <ul className={style.navigation}>
-          <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
-            <Link className={style.navigationLink} to="/">
-              Главная
-            </Link>
-          </li>
-          <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
-            <Link className={style.navigationLink} to="/books">
-              Книги
-            </Link>
-          </li>
-          <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
-            <HashLink className={style.navigationLink} to="/#video">
-              Видеоконтент
-            </HashLink>
-          </li>
-          <li className={style.navigationItem} onClick={() => setMenuActive(false)}>
-            <Link className={style.navigationLink} to="/contacts">
-              Контакты
-            </Link>
-          </li>
+          {menuNavigationData.map((item, i) => (
+            <li key={i} className={style.navigationItem} onClick={() => setMenuActive(false)}>
+              {item.isHashLink ? (
+                <HashLink
+                  className={style.navigationLink}
+                  to={item.linkHref}
+                  scroll={(el) => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                >
+                  {item.linkName}
+                </HashLink>
+              ) : (
+                <Link className={style.navigationLink} to={item.linkHref}>
+                  {item.linkName}
+                </Link>
+              )}
+            </li>
+          ))}
         </ul>
-        <p className={style.phone}>+7 (495) 374-84-75</p>
+        <p
+          className={style.phone}
+          onClick={() => {
+            window.location.href = 'tel:+74951506970';
+          }}
+        >
+          +7 (495) 374-84-75
+        </p>
         <ul className={style.social}>
-          <li className={style.socialItem}>
-            <a
-              className={style.socialLink}
-              href="https://t.me/dobroe_detstvo"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={telegram} alt="Телеграм" />
-            </a>
-          </li>
-          <li className={style.socialItem}>
-            <a
-              className={style.socialLink}
-              href="https://vk.com/izdatel_dobroe_detstvo"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={vkontakte} alt="ВКонтакте" />
-            </a>
-          </li>
-          <li className={style.socialItem}>
-            <a
-              className={style.socialLink}
-              href="https://www.youtube.com/channel/UCaiMuGF8LARjnHdsUrDRy9A"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={youtube} alt="Ютуб" />
-            </a>
-          </li>
+          {menuSocialData.map((item, i) => (
+            <li key={i} className={style.socialItem}>
+              <a className={style.socialLink} href={item.socialHref} target="_blank" rel="noreferrer">
+                <img src={item.socialIcon} alt={item.socialName} />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
