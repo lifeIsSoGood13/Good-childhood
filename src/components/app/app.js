@@ -13,50 +13,50 @@ import { PopupWithCover } from '../popup-with-cover/popup-with-cover';
 import { BooksListContext } from '../../services/AppContext';
 
 export function App() {
-  const [items, setItems] = useState([]);
-  const location = useLocation();
-  const [size, setSize] = useState(1000);
-  const [menuActive, setMenuActive] = useState(false);
-  const [bookImage, setBookImage] = useState();
-  const [popupOpen, setPopupOpen] = useState(false);
+	const [items, setItems] = useState([]);
+	const location = useLocation();
+	const [size, setSize] = useState(1000);
+	const [menuActive, setMenuActive] = useState(false);
+	const [bookImage, setBookImage] = useState();
+	const [popupOpen, setPopupOpen] = useState(false);
 
-  const booksListData = {
-    setPopupOpen: setPopupOpen,
-    setBookImage: setBookImage,
-    size: size,
-    books: items,
-    jumpToTop: () => window.scrollTo({ top: 0 }),
-  };
+	const booksListData = {
+		setPopupOpen: setPopupOpen,
+		setBookImage: setBookImage,
+		size: size,
+		books: items,
+		jumpToTop: () => window.scrollTo({ top: 0 }),
+	};
 
-  React.useEffect(() => {
-    fetch('https://632054139f82827dcf2a1cca.mockapi.io/books')
-      .then((res) => {
-        return res.ok ? res.json() : Promise.reject(`Ошибка ${res.status}`);
-      })
-      .then((data) => {
-        setItems(data);
-        window.addEventListener('resize', (e) => setSize(e.currentTarget.innerWidth));
-      })
-      .catch((err) => console.error(err));
-  }, []);
+	React.useEffect(() => {
+		fetch('https://632054139f82827dcf2a1cca.mockapi.io/books')
+			.then(res => {
+				return res.ok ? res.json() : Promise.reject(`Ошибка ${res.status}`);
+			})
+			.then(data => {
+				setItems(data);
+				window.addEventListener('resize', e => setSize(e.currentTarget.innerWidth));
+			})
+			.catch(err => console.error(err));
+	}, []);
 
-  return (
-    <React.Fragment>
-      <div className={location.pathname === '/' ? style.App_background_image : style.App}>
-        <Header setMenuActive={setMenuActive} />
-        <BooksListContext.Provider value={booksListData}>
-          <Routes>
-            <Route path="/" element={<Main />} />
-            <Route path="/books" element={<Books />} />
-            <Route path="/books/:name" element={<BookDetails />} />
-            <Route path="/contacts" element={<Contacts />} />
-            <Route path="/*" element={<NotFound />} />
-          </Routes>
-        </BooksListContext.Provider>
-        <Footer />
-        <Menu menuActive={menuActive} setMenuActive={setMenuActive} />
-      </div>
-      {popupOpen && <PopupWithCover bookImage={bookImage} setPopupOpen={setPopupOpen} />}
-    </React.Fragment>
-  );
+	return (
+		<React.Fragment>
+			<div className={location.pathname === '/' ? style.App_background_image : style.App}>
+				<Header setMenuActive={setMenuActive} />
+				<BooksListContext.Provider value={booksListData}>
+					<Routes>
+						<Route path='/' element={<Main />} />
+						<Route path='/books' element={<Books />} />
+						<Route path='/books/:name' element={<BookDetails />} />
+						<Route path='/contacts' element={<Contacts />} />
+						<Route path='*' element={<NotFound />} />
+					</Routes>
+				</BooksListContext.Provider>
+				<Footer />
+				<Menu menuActive={menuActive} setMenuActive={setMenuActive} />
+			</div>
+			{popupOpen && <PopupWithCover bookImage={bookImage} setPopupOpen={setPopupOpen} />}
+		</React.Fragment>
+	);
 }
