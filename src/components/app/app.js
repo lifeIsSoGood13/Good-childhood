@@ -46,7 +46,7 @@ export function App() {
 				<Header setMenuActive={setMenuActive} />
 				<BooksListContext.Provider value={booksListData}>
 					<Routes>
-						<Route path='/' element={<Main />} />
+						<Route exact path='/' element={<Main />} />
 						<Route path='/books' element={<Books />} />
 						<Route path='/books/:name' element={<BookDetails />} />
 						<Route path='/contacts' element={<Contacts />} />
