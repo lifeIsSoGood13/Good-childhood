@@ -19,7 +19,7 @@ export function Logo({ position }) {
 	return (
 		<picture>
 			<source type='image/webp' srcSet={logoWebp} />
-			<img className={setStyle()} src={logo} alt='Доброе детство' />
+			<img className={setStyle()} src={logo} alt='Логотип издательства Доброе детство' />
 		</picture>
 	);
 }
