@@ -26,13 +26,13 @@ export function NotFound() {
 					<img className={style.image} src={alas} alt='Ошибка 404' />
 				</picture>
 			</div>
-			<p className={style.text}>
+			<h1 className={style.text}>
 				А на{' '}
 				<Link className={style.link} to='/' onClick={booksListData.jumpToTop}>
 					главной странице
 				</Link>{' '}
 				у нас уже кое-что есть!
-			</p>
+			</h1>
 		</div>
 	);
 }

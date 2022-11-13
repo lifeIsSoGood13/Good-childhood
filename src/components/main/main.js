@@ -7,6 +7,7 @@ import ThirdCloud from '../../images/third-cloud.svg';
 import { Book } from '../book/book';
 import { BooksListContext } from '../../services/AppContext';
 import { Logo } from '../logo/logo';
+import ogImage from '../../images/og-image.png';
 import { Helmet } from 'react-helmet-async';
 
 export function Main() {
@@ -19,11 +20,11 @@ export function Main() {
 				<link rel='canonical' href='/' />
 				<meta
 					name='description'
-					content='Проект для повышения осознанности общества в деле воспитания детей. Издаем развивающие детские книги, разбираем воспитательные посылы популярных медиа-продуктов, проводим вебинары и форумы по актуальным темам воспитания детей'
+					content='Проект для повышения осознанности общества в деле воспитания детей. Издаем развивающие детские книги, разбираем воспитательные посылы популярных медиа-продуктов'
 				/>
 				<meta
 					name='keywords'
-					content='развивающие книги, воспитание детей, папин надзор, Константин Антипин'
+					content='доброе детство, развивающие книги, воспитание детей, папин надзор, Константин Антипин'
 				/>
 				<meta property='og:title' content='Доброе детство' />
 				<meta
