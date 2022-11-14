@@ -12,15 +12,15 @@ export function Books() {
 	return (
 		<section className={style.books}>
 			<Helmet>
-				<title>Книги | &laquo;Доброе детство&raquo;</title>
+				<title>Книги | «Доброе детство»</title>
 				<link rel='canonical' href='/books' />
 				<meta
 					name='description'
-					content='Ассортимент детских книг издательства «Доброе детство». Самые выгодные цены. Заказывайте онлайн и выбирайте удобный способ доставки'
+					content='Ассортимент детских книг издательства «Доброе детство». Самые выгодные цены. Заказывайте онлайн и выбирайте удобный способ доставки.'
 				/>
 				<meta name='keywords' content='доброе детство, издательство, книги, купить' />
-				<meta property='og:title' content='Книги "Доброго детства"' />
-				<meta property='og:description' content='Книжный ассортимент издательства по самым выгодным ценам' />
+				<meta property='og:title' content='Книги «Доброго детства»' />
+				<meta property='og:description' content='Книжный ассортимент издательства по самым выгодным ценам.' />
 				<meta property='og:type' content='website' />
 				<meta property='og:image' content={ogImage} />
 				<meta property='og:url' content='https://dobroedetstvo.ru/books' />

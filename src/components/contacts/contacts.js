@@ -9,7 +9,7 @@ export function Contacts() {
 	return (
 		<div className={style.contactsPage}>
 			<Helmet>
-				<title>Контакты | &laquo;Доброе детство&raquo;</title>
+				<title>Контакты | «Доброе детство»</title>
 				<link rel='canonical' href='/contacts' />
 				<meta
 					name='description'
