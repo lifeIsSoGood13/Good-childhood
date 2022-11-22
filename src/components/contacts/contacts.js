@@ -10,7 +10,7 @@ export function Contacts() {
 		<div className={style.contactsPage}>
 			<Helmet>
 				<title>Контакты | «Доброе детство»</title>
-				<link rel='canonical' href='/contacts' />
+				<link rel='canonical' href='https://dobroedetstvo.ru/contacts' />
 				<meta
 					name='description'
 					content='Если вы детский писатель или художник и хотите стать частью нашей команды, обязательно свяжитесь с нами по телефону или email.'

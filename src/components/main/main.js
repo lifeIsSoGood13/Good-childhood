@@ -17,7 +17,7 @@ export function Main() {
 		<main className={style.main}>
 			<Helmet>
 				<title>Издательство «Доброе детство»</title>
-				<link rel='canonical' href='/' />
+				<link rel='canonical' href='https://dobroedetstvo.ru/' />
 				<meta
 					name='description'
 					content='Проект для повышения осознанности общества в деле воспитания детей. Издаем развивающие детские книги, разбираем воспитательные посылы популярных медиа-продуктов.'

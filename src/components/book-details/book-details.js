@@ -19,7 +19,7 @@ export function BookDetails() {
 		<section className={style.bookDetails}>
 			<Helmet>
 				<title>{`${book ? `${book.title} | «Доброе детство»` : 'Загружается...'}`}</title>
-				<link rel='canonical' href={`/books/${id.name}`} />
+				<link rel='canonical' href={`https://dobroedetstvo.ru/books/${id.name}`} />
 				<meta name='description' content={`${book.annotation}`.slice(0, 165) + '...'} />
 				<meta name='keywords' content='доброе детство, добрая книга, книга, купить' />
 				<meta property='og:title' content={`${book.title}`} />

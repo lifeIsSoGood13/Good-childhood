@@ -13,7 +13,7 @@ export function Books() {
 		<section className={style.books}>
 			<Helmet>
 				<title>Книги | «Доброе детство»</title>
-				<link rel='canonical' href='/books' />
+				<link rel='canonical' href='https://dobroedetstvo.ru/books' />
 				<meta
 					name='description'
 					content='Ассортимент детских книг издательства «Доброе детство». Самые выгодные цены. Заказывайте онлайн и выбирайте удобный способ доставки.'
